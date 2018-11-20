@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class frm_menu_principal
     Inherits System.Windows.Forms.Form
 
     'Descartar substituições de formulário para limpar a lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,18 +20,19 @@ Partial Class frm_menu_principal
     'OBSERVAÇÃO: o procedimento a seguir é exigido pelo Windows Form Designer
     'Pode ser modificado usando o Windows Form Designer.  
     'Não o modifique usando o editor de códigos.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.btn_dados_empresa = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Button3 = New System.Windows.Forms.Button()
         Me.btn_plano_contas = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.Panel7 = New System.Windows.Forms.Panel()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.pan_menu_principal = New System.Windows.Forms.Panel()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -60,6 +61,20 @@ Partial Class frm_menu_principal
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(233, 768)
         Me.Panel1.TabIndex = 6
+        '
+        'Button3
+        '
+        Me.Button3.BackColor = System.Drawing.Color.FromArgb(CType(CType(186, Byte), Integer), CType(CType(35, Byte), Integer), CType(CType(35, Byte), Integer))
+        Me.Button3.FlatAppearance.BorderSize = 0
+        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button3.Font = New System.Drawing.Font("Tw Cen MT", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button3.ForeColor = System.Drawing.Color.White
+        Me.Button3.Location = New System.Drawing.Point(28, 686)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(175, 54)
+        Me.Button3.TabIndex = 11
+        Me.Button3.Text = "Sair"
+        Me.Button3.UseVisualStyleBackColor = False
         '
         'btn_plano_contas
         '
@@ -106,20 +121,6 @@ Partial Class frm_menu_principal
         Me.Button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Button2.UseVisualStyleBackColor = False
         '
-        'Button3
-        '
-        Me.Button3.BackColor = System.Drawing.Color.FromArgb(CType(CType(186, Byte), Integer), CType(CType(35, Byte), Integer), CType(CType(35, Byte), Integer))
-        Me.Button3.FlatAppearance.BorderSize = 0
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.Font = New System.Drawing.Font("Tw Cen MT", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.ForeColor = System.Drawing.Color.White
-        Me.Button3.Location = New System.Drawing.Point(28, 686)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(175, 54)
-        Me.Button3.TabIndex = 11
-        Me.Button3.Text = "Sair"
-        Me.Button3.UseVisualStyleBackColor = False
-        '
         'Panel5
         '
         Me.Panel5.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer))
@@ -136,6 +137,23 @@ Partial Class frm_menu_principal
         Me.Panel7.Size = New System.Drawing.Size(242, 162)
         Me.Panel7.TabIndex = 13
         '
+        'Panel2
+        '
+        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer))
+        Me.Panel2.Location = New System.Drawing.Point(1332, 0)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(13, 768)
+        Me.Panel2.TabIndex = 12
+        '
+        'pan_menu_principal
+        '
+        Me.pan_menu_principal.BackColor = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(234, Byte), Integer), CType(CType(234, Byte), Integer))
+        Me.pan_menu_principal.Dock = System.Windows.Forms.DockStyle.Right
+        Me.pan_menu_principal.Location = New System.Drawing.Point(229, 0)
+        Me.pan_menu_principal.Name = "pan_menu_principal"
+        Me.pan_menu_principal.Size = New System.Drawing.Size(1149, 768)
+        Me.pan_menu_principal.TabIndex = 15
+        '
         'PictureBox2
         '
         Me.PictureBox2.BackColor = System.Drawing.Color.Gainsboro
@@ -146,14 +164,6 @@ Partial Class frm_menu_principal
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox2.TabIndex = 14
         Me.PictureBox2.TabStop = False
-        '
-        'Panel2
-        '
-        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer))
-        Me.Panel2.Location = New System.Drawing.Point(1332, 0)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(13, 768)
-        Me.Panel2.TabIndex = 12
         '
         'frm_menu_principal
         '
@@ -169,6 +179,7 @@ Partial Class frm_menu_principal
         Me.Controls.Add(Me.btn_dados_empresa)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Panel5)
+        Me.Controls.Add(Me.pan_menu_principal)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
         Me.Name = "frm_menu_principal"
         Me.Text = "Form1"
@@ -187,4 +198,5 @@ Partial Class frm_menu_principal
     Friend WithEvents Panel7 As Panel
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents Panel2 As Panel
+    Friend WithEvents pan_menu_principal As Panel
 End Class

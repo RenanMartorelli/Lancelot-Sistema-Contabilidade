@@ -47,6 +47,7 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MySql.Data, Version=8.0.13.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
@@ -85,6 +86,7 @@
     <Compile Include="frm_menu_principal.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="mod_banco_de_dados.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -106,6 +108,18 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="uct_criar_usuario.Designer.vb">
+      <DependentUpon>uct_criar_usuario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="uct_criar_usuario.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uct_novo_lançamento.Designer.vb">
+      <DependentUpon>uct_novo_lançamento.vb</DependentUpon>
+    </Compile>
+    <Compile Include="uct_novo_lançamento.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="frm_login.resx">
@@ -122,6 +136,12 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uct_criar_usuario.resx">
+      <DependentUpon>uct_criar_usuario.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uct_novo_lançamento.resx">
+      <DependentUpon>uct_novo_lançamento.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
