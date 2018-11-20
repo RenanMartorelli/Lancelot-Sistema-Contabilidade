@@ -23,6 +23,7 @@ Public Class frm_login
         End If
 
         Try
+            'ui bebe eu gosto mais de vc do que de mim
             my_sql_connection.Open()
             query = "select * from lancelot.login where USER_NAME= '" & txt_nome.Text & "' and SENHA= '" & txt_senha.Text & "' "
             cmd = New MySqlCommand(query, my_sql_connection)
