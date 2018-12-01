@@ -35,9 +35,6 @@ Public Class frm_login
 
             If cont = 1 Then
                 MsgBox("Usuário encontrado")
-                If tipologin = "operador" Then
-                    frm_menu_principal.btn_dados_empresa.Enabled = False
-                End If
                 frm_menu_principal.Show()
                 my_sql_connection.Close()
 
