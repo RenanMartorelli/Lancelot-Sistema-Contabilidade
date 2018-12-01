@@ -1,6 +1,6 @@
 ﻿Imports MySql.Data.MySqlClient
 Module mod_banco_de_dados
-    ''teste
+
     Public my_sql_connection As New MySqlConnection
     Public cmd As New MySqlCommand
     Public query, execute, comando As String

@@ -26,7 +26,7 @@ Partial Class uct_dados_empresa
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Atividade = New System.Windows.Forms.Label()
         Me.txt_segmento = New System.Windows.Forms.TextBox()
-        Me.txt_endereço = New System.Windows.Forms.TextBox()
+        Me.txt_endereco = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.txt_email = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -77,17 +77,17 @@ Partial Class uct_dados_empresa
         Me.txt_segmento.Size = New System.Drawing.Size(435, 33)
         Me.txt_segmento.TabIndex = 5
         '
-        'txt_endereço
+        'txt_endereco
         '
-        Me.txt_endereço.BackColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer))
-        Me.txt_endereço.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txt_endereço.Font = New System.Drawing.Font("Tw Cen MT", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_endereço.ForeColor = System.Drawing.SystemColors.Menu
-        Me.txt_endereço.Location = New System.Drawing.Point(110, 410)
-        Me.txt_endereço.Name = "txt_endereço"
-        Me.txt_endereço.PasswordChar = Global.Microsoft.VisualBasic.ChrW(8226)
-        Me.txt_endereço.Size = New System.Drawing.Size(529, 33)
-        Me.txt_endereço.TabIndex = 7
+        Me.txt_endereco.BackColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer))
+        Me.txt_endereco.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txt_endereco.Font = New System.Drawing.Font("Tw Cen MT", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_endereco.ForeColor = System.Drawing.SystemColors.Menu
+        Me.txt_endereco.Location = New System.Drawing.Point(110, 410)
+        Me.txt_endereco.Name = "txt_endereco"
+        Me.txt_endereco.PasswordChar = Global.Microsoft.VisualBasic.ChrW(8226)
+        Me.txt_endereco.Size = New System.Drawing.Size(529, 33)
+        Me.txt_endereco.TabIndex = 7
         '
         'Label4
         '
@@ -174,7 +174,7 @@ Partial Class uct_dados_empresa
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.txt_email)
         Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.txt_endereço)
+        Me.Controls.Add(Me.txt_endereco)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.txt_segmento)
         Me.Controls.Add(Me.Atividade)
@@ -191,7 +191,7 @@ Partial Class uct_dados_empresa
     Friend WithEvents Label1 As Label
     Friend WithEvents Atividade As Label
     Friend WithEvents txt_segmento As TextBox
-    Friend WithEvents txt_endereço As TextBox
+    Friend WithEvents txt_endereco As TextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents txt_email As TextBox
     Friend WithEvents Label5 As Label
