@@ -28,7 +28,7 @@ Public Class uct_criar_usuario
         grau_acesso = "administrador"
     End Sub
 
-    Private Sub RadioButton1_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton1.CheckedChanged
+    Private Sub RadioButton1_CheckedChanged(sender As Object, e As EventArgs) Handles rdb_operador.CheckedChanged
         grau_acesso = "operador"
     End Sub
 End Class

@@ -32,6 +32,7 @@ Public Class frm_login
                 tipologin = leitura("TIPO").ToString
                 cont = cont + 1
             End While
+
             If cont = 1 Then
                 MsgBox("Usuário encontrado")
                 If tipologin = "operador" Then
