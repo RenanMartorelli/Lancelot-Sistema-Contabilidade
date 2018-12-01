@@ -73,6 +73,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Component1.Designer.vb">
+      <DependentUpon>Component1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Component1.vb">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="frm_login.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +120,12 @@
     <Compile Include="uct_criar_usuario.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="uct_dados_empresa.Designer.vb">
+      <DependentUpon>uct_dados_empresa.vb</DependentUpon>
+    </Compile>
+    <Compile Include="uct_dados_empresa.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="uct_novo_lançamento.Designer.vb">
       <DependentUpon>uct_novo_lançamento.vb</DependentUpon>
     </Compile>
@@ -139,6 +151,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="uct_criar_usuario.resx">
       <DependentUpon>uct_criar_usuario.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uct_dados_empresa.resx">
+      <DependentUpon>uct_dados_empresa.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="uct_novo_lançamento.resx">
       <DependentUpon>uct_novo_lançamento.vb</DependentUpon>

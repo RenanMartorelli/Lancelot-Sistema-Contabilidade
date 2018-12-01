@@ -37,6 +37,8 @@ Public Class frm_login
                 MsgBox("Usuário encontrado")
                 frm_menu_principal.Show()
                 my_sql_connection.Close()
+
+
             ElseIf cont = 0 Then
                 MsgBox("Usuário ou senha inválidos")
                 my_sql_connection.Close()

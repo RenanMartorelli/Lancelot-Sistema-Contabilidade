@@ -16,8 +16,78 @@
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
 
+
+
+
+        ' COMPRA de ESTOQUE -> crédito no banco e débito no estoque.
+
+        'registrando valores na tablea ESTOQUE: valor unitário, data, quantidade, total, 
+
+        ' TABELA DE LANÇAMENTOS DO BANCO -> AQUI NÓS VERIFICAMOS O VALOR DE CADA LANÇAMENTO, ASSOCIANDO-O A UM BANCO
+
+        ' TABELA DE LANÇAMENTOS DO ESTOQUE
+
+
+
+
+        'DESCOBRIR O VALOR DE LUCRO PELO PEPS
+
+        'PUXAR OS VALORES DA TABELA ORDER BY DATA A PARTIR MAIS VELHO
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        ' QUERO SABER O SALDO QUE TEM NO MEU BANCO (DINHEIRO) - RESOLVEU
+        ' QUERO SABER QUANTO (DINHEIRO) OU QUANTO (QUANTIDADE) TEM NO MEU ESTOQUE
+        ' QUERO SABER O QUANTO QUE EU TENHO DE LUCRO COM CADA VENDA (UEPS PEPS E MEDIA)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         Dim uct_novo_lançamento = New uct_novo_lançamento
         pan_menu_principal.Controls.Add(uct_novo_lançamento)
         uct_novo_lançamento.BringToFront()
+    End Sub
+
+    Private Sub pan_menu_principal_Paint(sender As Object, e As PaintEventArgs) Handles pan_menu_principal.Paint
+
     End Sub
 End Class

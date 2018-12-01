@@ -22,6 +22,7 @@ Partial Class frm_menu_principal
     'Não o modifique usando o editor de códigos.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frm_menu_principal))
         Me.btn_dados_empresa = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Button3 = New System.Windows.Forms.Button()
@@ -33,8 +34,11 @@ Partial Class frm_menu_principal
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.pan_menu_principal = New System.Windows.Forms.Panel()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
+        Me.pan_menu_principal.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'btn_dados_empresa
@@ -148,6 +152,7 @@ Partial Class frm_menu_principal
         'pan_menu_principal
         '
         Me.pan_menu_principal.BackColor = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(234, Byte), Integer), CType(CType(234, Byte), Integer))
+        Me.pan_menu_principal.Controls.Add(Me.PictureBox1)
         Me.pan_menu_principal.Dock = System.Windows.Forms.DockStyle.Right
         Me.pan_menu_principal.Location = New System.Drawing.Point(229, 0)
         Me.pan_menu_principal.Name = "pan_menu_principal"
@@ -158,12 +163,23 @@ Partial Class frm_menu_principal
         '
         Me.PictureBox2.BackColor = System.Drawing.Color.Gainsboro
         Me.PictureBox2.Image = Global.lancelot_sistema_contabilidade.My.Resources.Resources.Lancelot_logo
-        Me.PictureBox2.Location = New System.Drawing.Point(27, 36)
+        Me.PictureBox2.Location = New System.Drawing.Point(31, 33)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(206, 135)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox2.TabIndex = 14
         Me.PictureBox2.TabStop = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(234, Byte), Integer), CType(CType(234, Byte), Integer))
+        Me.PictureBox1.Image = Global.lancelot_sistema_contabilidade.My.Resources.Resources.Lancelot_logo
+        Me.PictureBox1.Location = New System.Drawing.Point(325, 128)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(490, 455)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 16
+        Me.PictureBox1.TabStop = False
         '
         'frm_menu_principal
         '
@@ -181,10 +197,13 @@ Partial Class frm_menu_principal
         Me.Controls.Add(Me.Panel5)
         Me.Controls.Add(Me.pan_menu_principal)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frm_menu_principal"
         Me.Text = "Form1"
         Me.Panel1.ResumeLayout(False)
+        Me.pan_menu_principal.ResumeLayout(False)
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -199,4 +218,5 @@ Partial Class frm_menu_principal
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents Panel2 As Panel
     Friend WithEvents pan_menu_principal As Panel
+    Friend WithEvents PictureBox1 As PictureBox
 End Class
