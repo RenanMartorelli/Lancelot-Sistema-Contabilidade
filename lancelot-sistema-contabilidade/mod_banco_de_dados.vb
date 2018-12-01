@@ -6,6 +6,18 @@ Module mod_banco_de_dados
     Public da As MySqlDataAdapter
     Public leitura As MySqlDataReader 'pra ler
 
+    'Modulo Teste do Titio Keizo
+    Public sql As String
+    Public db As New ADODB.Connection
+    Public rs As New ADODB.Recordset
+    Public conexao = Application.StartupPath & "\Banco\banco.mdb\"
+
+    Sub conecta_keizo()
+        db = CreateObject("ADODB.connection")
+        db.Open("Provider=Microsoft.JET.OLEDB.4.0;Data Source=" & conexao)
+        MsgBox("Conexão Keizo Bem Sucedida.")
+    End Sub
+    'FIM do Teste do Titio Keizo
 
     Sub conexao_banco()
         my_sql_connection = New MySqlConnection

@@ -33,6 +33,7 @@ Public Class frm_login
             While leitura.Read
                 cont = cont + 1
             End While
+
             If cont = 1 Then
                 MsgBox("Usuário encontrado")
                 frm_menu_principal.Show()

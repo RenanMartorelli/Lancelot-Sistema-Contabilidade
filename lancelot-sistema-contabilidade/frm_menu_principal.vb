@@ -20,4 +20,5 @@
         pan_menu_principal.Controls.Add(uct_novo_lançamento)
         uct_novo_lançamento.BringToFront()
     End Sub
+
 End Class
