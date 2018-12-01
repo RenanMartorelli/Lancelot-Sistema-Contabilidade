@@ -9,7 +9,7 @@ Module mod_banco_de_dados
 
     Sub conexao_banco()
         my_sql_connection = New MySqlConnection
-        my_sql_connection.ConnectionString = "server=lancelot-contabilidade.mysql.database.azure.com; userid=lancelot_adm@lancelot-contabilidade;password=Fatec1234;database=lancelot"
+        my_sql_connection.ConnectionString = "server=bancodadoshousebar.mysql.database.azure.com; userid=vb_bar@bancodadoshousebar;password=Fabi5412;database=lancelot"
         Try
             my_sql_connection.Open()
             MessageBox.Show("conexão ok!")
