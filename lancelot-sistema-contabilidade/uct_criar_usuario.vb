@@ -1,6 +1,7 @@
 ﻿Imports MySql.Data.MySqlClient
 
 Public Class uct_criar_usuario
+    Dim frm_menu_principal As frm_menu_principal
     Dim grau_acesso As String
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btn_confirmar.Click
 
@@ -17,6 +18,9 @@ Public Class uct_criar_usuario
             MsgBox("Erro ao criar o usuáario!")
         Finally
             my_sql_connection.Dispose()
+            frm_menu_principal = Me.ParentForm
+            frm_menu_principal.(Me)
+
         End Try
     End Sub
 
