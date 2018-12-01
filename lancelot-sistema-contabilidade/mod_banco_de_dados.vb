@@ -5,6 +5,7 @@ Module mod_banco_de_dados
     Public query, execute, comando As String
     Public da As MySqlDataAdapter
     Public leitura As MySqlDataReader 'pra ler
+    Public tipologin As String
 
 
     Sub conexao_banco()
