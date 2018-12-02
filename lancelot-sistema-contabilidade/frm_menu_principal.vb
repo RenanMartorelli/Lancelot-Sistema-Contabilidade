@@ -111,4 +111,11 @@
         pan_menu_principal.Controls.Add(uct_plano_contas)
         uct_plano_contas.BringToFront()
     End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Dim uct_relatorio As uct_relatorio
+        uct_relatorio = New uct_relatorio
+        pan_menu_principal.Controls.Add(uct_relatorio)
+        uct_relatorio.BringToFront()
+    End Sub
 End Class

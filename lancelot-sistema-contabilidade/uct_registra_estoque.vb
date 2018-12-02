@@ -28,5 +28,8 @@ Public Class uct_registra_estoque
         Catch ex As Exception
             MsgBox("Mais erros...VOCÊ PARECE BURRO MEO")
         End Try
+        Dim frm_menu_principal As frm_menu_principal
+        frm_menu_principal = Me.ParentForm
+        frm_menu_principal.Finaliza_user_control(Me)
     End Sub
 End Class
