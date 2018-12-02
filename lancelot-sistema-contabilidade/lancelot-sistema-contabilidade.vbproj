@@ -126,6 +126,18 @@
     <Compile Include="uct_novo_lançamento.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="uct_plano_contas.Designer.vb">
+      <DependentUpon>uct_plano_contas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="uct_plano_contas.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uct_relatorio.Designer.vb">
+      <DependentUpon>uct_relatorio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="uct_relatorio.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="frm_login.resx">
@@ -151,6 +163,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="uct_novo_lançamento.resx">
       <DependentUpon>uct_novo_lançamento.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uct_plano_contas.resx">
+      <DependentUpon>uct_plano_contas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uct_relatorio.resx">
+      <DependentUpon>uct_relatorio.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

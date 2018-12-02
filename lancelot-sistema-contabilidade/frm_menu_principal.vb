@@ -21,6 +21,13 @@
         uct_criar_usuario.BringToFront()
     End Sub
 
+    Public Sub chama_novo_estoque()
+        'Dim uct_registra_estoque = New uct_registra_estoque
+        ' pan_menu_principal.Controls.Add(uct_registra_estoque)
+        'uct_registra_estoque.BringToFront()
+    End Sub
+
+
     Public Sub Finaliza_user_control(uct As UserControl)
         pan_menu_principal.Controls.Remove(uct)                                 'Remove o userControl imputado
     End Sub
@@ -96,5 +103,12 @@
         Dim uct_novo_lançamento = New uct_novo_lançamento
         pan_menu_principal.Controls.Add(uct_novo_lançamento)
         uct_novo_lançamento.BringToFront()
+    End Sub
+
+    Private Sub btn_plano_contas_Click(sender As Object, e As EventArgs) Handles btn_plano_contas.Click
+        Dim uct_plano_contas As uct_plano_contas
+        uct_plano_contas = New uct_plano_contas
+        pan_menu_principal.Controls.Add(uct_plano_contas)
+        uct_plano_contas.BringToFront()
     End Sub
 End Class
