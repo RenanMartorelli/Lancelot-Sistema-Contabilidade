@@ -23,12 +23,16 @@ Partial Class uct_relatorio
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.txt_valor_total = New System.Windows.Forms.TextBox()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.txt_qtde = New System.Windows.Forms.TextBox()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.dgv_relatório = New System.Windows.Forms.DataGridView()
+        Me.data_lancamento = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.nome_produto = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.quantidade_vendida = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.valor_venda = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.valor_total = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.rdb_venda_bruta = New System.Windows.Forms.RadioButton()
+        Me.rdb_vendas_lucro = New System.Windows.Forms.RadioButton()
+        Me.cmb_produtos = New System.Windows.Forms.ComboBox()
+        CType(Me.dgv_relatório, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label6
@@ -39,87 +43,108 @@ Partial Class uct_relatorio
         Me.Label6.ForeColor = System.Drawing.Color.White
         Me.Label6.Location = New System.Drawing.Point(88, 52)
         Me.Label6.Name = "Label6"
-        Me.Label6.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Label6.Padding = New System.Windows.Forms.Padding(4)
         Me.Label6.Size = New System.Drawing.Size(150, 47)
         Me.Label6.TabIndex = 10
         Me.Label6.Text = "Relatório"
         '
-        'Label4
+        'dgv_relatório
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Tw Cen MT", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(304, 612)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(68, 28)
-        Me.Label4.TabIndex = 22
-        Me.Label4.Text = "Saldo"
+        Me.dgv_relatório.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgv_relatório.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.data_lancamento, Me.nome_produto, Me.quantidade_vendida, Me.valor_venda, Me.valor_total})
+        Me.dgv_relatório.Location = New System.Drawing.Point(95, 222)
+        Me.dgv_relatório.Name = "dgv_relatório"
+        Me.dgv_relatório.RowTemplate.Height = 24
+        Me.dgv_relatório.Size = New System.Drawing.Size(946, 415)
+        Me.dgv_relatório.TabIndex = 25
         '
-        'txt_valor_total
+        'data_lancamento
         '
-        Me.txt_valor_total.BackColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer))
-        Me.txt_valor_total.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txt_valor_total.Font = New System.Drawing.Font("Tw Cen MT", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_valor_total.ForeColor = System.Drawing.SystemColors.Menu
-        Me.txt_valor_total.Location = New System.Drawing.Point(309, 641)
-        Me.txt_valor_total.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.txt_valor_total.Name = "txt_valor_total"
-        Me.txt_valor_total.Size = New System.Drawing.Size(157, 33)
-        Me.txt_valor_total.TabIndex = 21
+        Me.data_lancamento.HeaderText = "Data"
+        Me.data_lancamento.Name = "data_lancamento"
         '
-        'Label5
+        'nome_produto
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Tw Cen MT", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(90, 612)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(132, 28)
-        Me.Label5.TabIndex = 24
-        Me.Label5.Text = "Quantidade"
+        Me.nome_produto.HeaderText = "Nome do produto"
+        Me.nome_produto.Name = "nome_produto"
+        Me.nome_produto.Width = 500
         '
-        'txt_qtde
+        'quantidade_vendida
         '
-        Me.txt_qtde.BackColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer))
-        Me.txt_qtde.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txt_qtde.Font = New System.Drawing.Font("Tw Cen MT", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_qtde.ForeColor = System.Drawing.SystemColors.Menu
-        Me.txt_qtde.Location = New System.Drawing.Point(96, 641)
-        Me.txt_qtde.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.txt_qtde.Name = "txt_qtde"
-        Me.txt_qtde.Size = New System.Drawing.Size(157, 33)
-        Me.txt_qtde.TabIndex = 23
+        Me.quantidade_vendida.HeaderText = "Quant. Vendida"
+        Me.quantidade_vendida.Name = "quantidade_vendida"
         '
-        'DataGridView1
+        'valor_venda
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(95, 147)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.Size = New System.Drawing.Size(941, 415)
-        Me.DataGridView1.TabIndex = 25
+        Me.valor_venda.HeaderText = "Valor venda"
+        Me.valor_venda.Name = "valor_venda"
+        '
+        'valor_total
+        '
+        Me.valor_total.HeaderText = "Valor total"
+        Me.valor_total.Name = "valor_total"
+        '
+        'rdb_venda_bruta
+        '
+        Me.rdb_venda_bruta.AutoSize = True
+        Me.rdb_venda_bruta.Font = New System.Drawing.Font("Tw Cen MT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rdb_venda_bruta.Location = New System.Drawing.Point(407, 65)
+        Me.rdb_venda_bruta.Name = "rdb_venda_bruta"
+        Me.rdb_venda_bruta.Size = New System.Drawing.Size(154, 27)
+        Me.rdb_venda_bruta.TabIndex = 26
+        Me.rdb_venda_bruta.TabStop = True
+        Me.rdb_venda_bruta.Text = "Vendas brutas"
+        Me.rdb_venda_bruta.UseVisualStyleBackColor = True
+        '
+        'rdb_vendas_lucro
+        '
+        Me.rdb_vendas_lucro.AutoSize = True
+        Me.rdb_vendas_lucro.Font = New System.Drawing.Font("Tw Cen MT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rdb_vendas_lucro.Location = New System.Drawing.Point(644, 65)
+        Me.rdb_vendas_lucro.Name = "rdb_vendas_lucro"
+        Me.rdb_vendas_lucro.Size = New System.Drawing.Size(191, 27)
+        Me.rdb_vendas_lucro.TabIndex = 27
+        Me.rdb_vendas_lucro.TabStop = True
+        Me.rdb_vendas_lucro.Text = "Vendas com lucros"
+        Me.rdb_vendas_lucro.UseVisualStyleBackColor = True
+        '
+        'cmb_produtos
+        '
+        Me.cmb_produtos.BackColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer))
+        Me.cmb_produtos.Font = New System.Drawing.Font("Tw Cen MT", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmb_produtos.ForeColor = System.Drawing.SystemColors.Info
+        Me.cmb_produtos.FormattingEnabled = True
+        Me.cmb_produtos.Location = New System.Drawing.Point(397, 128)
+        Me.cmb_produtos.Name = "cmb_produtos"
+        Me.cmb_produtos.Size = New System.Drawing.Size(438, 35)
+        Me.cmb_produtos.TabIndex = 28
         '
         'uct_relatorio
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(234, Byte), Integer), CType(CType(234, Byte), Integer))
-        Me.Controls.Add(Me.DataGridView1)
-        Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.txt_qtde)
-        Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.txt_valor_total)
+        Me.Controls.Add(Me.cmb_produtos)
+        Me.Controls.Add(Me.rdb_vendas_lucro)
+        Me.Controls.Add(Me.rdb_venda_bruta)
+        Me.Controls.Add(Me.dgv_relatório)
         Me.Controls.Add(Me.Label6)
         Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "uct_relatorio"
         Me.Size = New System.Drawing.Size(1147, 768)
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgv_relatório, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
     Friend WithEvents Label6 As Label
-    Friend WithEvents Label4 As Label
-    Friend WithEvents txt_valor_total As TextBox
-    Friend WithEvents Label5 As Label
-    Friend WithEvents txt_qtde As TextBox
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents dgv_relatório As DataGridView
+    Friend WithEvents data_lancamento As DataGridViewTextBoxColumn
+    Friend WithEvents nome_produto As DataGridViewTextBoxColumn
+    Friend WithEvents quantidade_vendida As DataGridViewTextBoxColumn
+    Friend WithEvents valor_venda As DataGridViewTextBoxColumn
+    Friend WithEvents valor_total As DataGridViewTextBoxColumn
+    Friend WithEvents rdb_venda_bruta As RadioButton
+    Friend WithEvents rdb_vendas_lucro As RadioButton
+    Friend WithEvents cmb_produtos As ComboBox
 End Class
