@@ -18,6 +18,7 @@ Public Class frm_login
 
         If txt_nome.Text = "admin" And txt_nome.Text = "admin" Then
             frm_menu_principal.Show()
+            Exit Sub
         End If
 
         Try
@@ -35,9 +36,6 @@ Public Class frm_login
 
             If cont = 1 Then
                 MsgBox("Usuário encontrado")
-                If tipologin = "operador" Then
-                    frm_menu_principal.btn_dados_empresa.Enabled = False
-                End If
                 frm_menu_principal.Show()
                 my_sql_connection.Close()
 
@@ -52,7 +50,6 @@ Public Class frm_login
         Finally
             my_sql_connection.Dispose()
         End Try
-        Me.Visible = False
     End Sub
 
     Private Sub frm_login_Load(sender As Object, e As EventArgs) Handles Me.Load

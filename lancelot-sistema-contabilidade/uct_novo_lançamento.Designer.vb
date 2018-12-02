@@ -62,7 +62,7 @@ Partial Class uct_novo_lançamento
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Tw Cen MT", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(111, 185)
+        Me.Label1.Location = New System.Drawing.Point(176, 380)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(121, 22)
         Me.Label1.TabIndex = 1
