@@ -42,7 +42,7 @@ Partial Class uct_novo_lançamento
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
-        Me.Label12 = New System.Windows.Forms.Label()
+        Me.lbl_id_lancamento = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
@@ -283,8 +283,9 @@ Partial Class uct_novo_lançamento
         Me.Label11.TabIndex = 29
         Me.Label11.Text = "Complemento"
         '
-        'Label12
+        'lbl_id_lancamento
         '
+<<<<<<< HEAD
         Me.Label12.BackColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.Label12.Font = New System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label12.ForeColor = System.Drawing.SystemColors.Menu
@@ -295,6 +296,17 @@ Partial Class uct_novo_lançamento
         Me.Label12.TabIndex = 31
         Me.Label12.Text = "ID"
         Me.Label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+=======
+        Me.lbl_id_lancamento.BackColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer))
+        Me.lbl_id_lancamento.Font = New System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_id_lancamento.ForeColor = System.Drawing.SystemColors.Menu
+        Me.lbl_id_lancamento.Location = New System.Drawing.Point(614, 62)
+        Me.lbl_id_lancamento.Name = "lbl_id_lancamento"
+        Me.lbl_id_lancamento.Size = New System.Drawing.Size(116, 28)
+        Me.lbl_id_lancamento.TabIndex = 31
+        Me.lbl_id_lancamento.Text = "ID"
+        Me.lbl_id_lancamento.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+>>>>>>> 67416839ff8710858d4202cc5618d729c01d2283
         '
         'Label13
         '
@@ -324,7 +336,7 @@ Partial Class uct_novo_lançamento
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(234, Byte), Integer), CType(CType(234, Byte), Integer))
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label13)
-        Me.Controls.Add(Me.Label12)
+        Me.Controls.Add(Me.lbl_id_lancamento)
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.Label8)
@@ -373,7 +385,7 @@ Partial Class uct_novo_lançamento
     Friend WithEvents Label9 As Label
     Friend WithEvents Label10 As Label
     Friend WithEvents Label11 As Label
-    Friend WithEvents Label12 As Label
+    Friend WithEvents lbl_id_lancamento As Label
     Friend WithEvents Label13 As Label
     Friend WithEvents Button1 As Button
 End Class

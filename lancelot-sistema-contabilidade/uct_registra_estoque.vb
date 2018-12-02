@@ -4,14 +4,29 @@ Public Class uct_registra_estoque
         Try
             Dim id As New Integer
             my_sql_connection.Open()
-            query = "select max(IDCADASTROESTOQUE) from lancelot.cadastro_estoque"
+            query = "select MAX(IDCADASTROESTOQUE) as IDCADASTROESTOQUE from lancelot.cadastro_estoque"
             cmd = New MySqlCommand(query, my_sql_connection)
             leitura = cmd.ExecuteReader
             While leitura.Read
-                lbl_id.Text = leitura("IDCADASTROESTOQUE") + 1
+                id = leitura("IDCADASTROESTOQUE")
+                lbl_id.Text = id + 1
             End While
+            my_sql_connection.Close()
         Catch ex As Exception
             MsgBox("DEU RUIM DOIDOS")
+        End Try
+    End Sub
+
+    Private Sub btn_registrar_Click(sender As Object, e As EventArgs) Handles btn_registrar.Click
+        Try
+            my_sql_connection.Open()
+            query = "insert into lancelot.cadastro_estoque(NOME_PRODUTO) VALUES ('" & txt_nome_estoque.Text & "')"
+            cmd = New MySqlCommand(query, my_sql_connection)
+            leitura = cmd.ExecuteReader
+            my_sql_connection.Close()
+            MsgBox("Estoque registrado com sucesso", MsgBoxStyle.Information, "Lancelot - Registro de Estoque")
+        Catch ex As Exception
+            MsgBox("Mais erros...VOCÊ PARECE BURRO MEO")
         End Try
     End Sub
 End Class
