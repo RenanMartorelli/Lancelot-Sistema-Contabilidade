@@ -4,7 +4,7 @@ Module mod_banco_de_dados
     Public my_sql_connection As New MySqlConnection
     Public cmd As New MySqlCommand
     Public query, execute, comando As String
-    Public da As MySqlDataAdapter
+    Public da As New MySqlDataAdapter
     Public leitura As MySqlDataReader 'pra ler
     Public tipologin As String
 

@@ -22,9 +22,9 @@
     End Sub
 
     Public Sub chama_novo_estoque()
-        'Dim uct_registra_estoque = New uct_registra_estoque
-        ' pan_menu_principal.Controls.Add(uct_registra_estoque)
-        'uct_registra_estoque.BringToFront()
+        Dim uct_registra_estoque = New uct_registra_estoque
+        pan_menu_principal.Controls.Add(uct_registra_estoque)
+        uct_registra_estoque.BringToFront()
     End Sub
 
 
