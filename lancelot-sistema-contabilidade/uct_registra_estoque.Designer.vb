@@ -22,7 +22,7 @@ Partial Class uct_registra_estoque
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.txt_nome = New System.Windows.Forms.TextBox()
+        Me.txt_nome_estoque = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.btn_registrar = New System.Windows.Forms.Button()
@@ -30,17 +30,17 @@ Partial Class uct_registra_estoque
         Me.Label2 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
-        'txt_nome
+        'txt_nome_estoque
         '
-        Me.txt_nome.BackColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer))
-        Me.txt_nome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txt_nome.Font = New System.Drawing.Font("Tw Cen MT", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_nome.ForeColor = System.Drawing.SystemColors.Menu
-        Me.txt_nome.Location = New System.Drawing.Point(227, 273)
-        Me.txt_nome.Margin = New System.Windows.Forms.Padding(2)
-        Me.txt_nome.Name = "txt_nome"
-        Me.txt_nome.Size = New System.Drawing.Size(406, 28)
-        Me.txt_nome.TabIndex = 0
+        Me.txt_nome_estoque.BackColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer))
+        Me.txt_nome_estoque.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txt_nome_estoque.Font = New System.Drawing.Font("Tw Cen MT", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_nome_estoque.ForeColor = System.Drawing.SystemColors.Menu
+        Me.txt_nome_estoque.Location = New System.Drawing.Point(227, 273)
+        Me.txt_nome_estoque.Margin = New System.Windows.Forms.Padding(2)
+        Me.txt_nome_estoque.Name = "txt_nome_estoque"
+        Me.txt_nome_estoque.Size = New System.Drawing.Size(406, 28)
+        Me.txt_nome_estoque.TabIndex = 0
         '
         'Label1
         '
@@ -117,7 +117,7 @@ Partial Class uct_registra_estoque
         Me.Controls.Add(Me.btn_registrar)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.txt_nome)
+        Me.Controls.Add(Me.txt_nome_estoque)
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "uct_registra_estoque"
         Me.Size = New System.Drawing.Size(860, 624)
@@ -126,7 +126,7 @@ Partial Class uct_registra_estoque
 
     End Sub
 
-    Friend WithEvents txt_nome As TextBox
+    Friend WithEvents txt_nome_estoque As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents btn_registrar As Button
