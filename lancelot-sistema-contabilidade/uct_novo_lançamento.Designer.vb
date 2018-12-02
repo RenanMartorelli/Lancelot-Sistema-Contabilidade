@@ -282,9 +282,23 @@ Partial Class uct_novo_lançamento
         Me.Label11.Size = New System.Drawing.Size(152, 28)
         Me.Label11.TabIndex = 29
         Me.Label11.Text = "Complemento"
+<<<<<<< HEAD
         '
         'lbl_id_lancamento
         '
+=======
+
+        'Me.Label12.BackColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer))
+        'Me.Label12.Font = New System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        'Me.Label12.ForeColor = System.Drawing.SystemColors.Menu
+        'Me.Label12.Location = New System.Drawing.Point(819, 76)
+        'Me.Label12.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        'Me.Label12.Name = "Label12"
+        'Me.Label12.Size = New System.Drawing.Size(155, 34)
+        'Me.Label12.TabIndex = 31
+        'Me.Label12.Text = "ID"
+        'Me.Label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+>>>>>>> 8ec8d2c6aa6e165660ef52d15396c3442132b154
 
         Me.lbl_id_lancamento.BackColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.lbl_id_lancamento.Font = New System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
