@@ -113,32 +113,45 @@ Public Class uct_novo_lançamento
                 cmb_comp_debito.Items.Add("Santander")
 
             ElseIf cmb_conta_debito.SelectedItem.ToString = ("Estoque") Then
-                cmb_comp_debito.Items.Clear()
-                cmb_comp_debito.Items.Add("Produto A")
-                cmb_comp_debito.Items.Add("Produto B")
+                my_sql_connection.Open()
+                query = "select * from lancelot.cadastro_estoque"
+                cmd = New MySqlCommand(query, my_sql_connection)
+                leitura = cmd.ExecuteReader
+                While leitura.Read
+                    Dim produto_nome = leitura.GetString("NOME_PRODUTO")
+                    cmb_comp_debito.Items.Add(produto_nome)
+                End While
+                my_sql_connection.Close()
             End If
-
-
-
         Catch ex As Exception
-            MsgBox("Erro na Conta Débito.")
+            MsgBox("Erro na Conta Débito")
+        Finally
+            my_sql_connection.Dispose()
         End Try
     End Sub
 
     Private Sub cmb_conta_credito_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmb_conta_credito.SelectedIndexChanged
+        Try
+            If cmb_conta_credito.SelectedItem.ToString = ("Banco") Then
+                cmb_comp_credito.Items.Clear()
+                cmb_comp_credito.Items.Add("Santander")
 
-        If cmb_conta_credito.SelectedItem.ToString = ("Banco") Then
-            cmb_comp_credito.Items.Clear()
-            cmb_comp_credito.Items.Add("Santander")
+            ElseIf cmb_conta_credito.SelectedItem.ToString = ("Estoque") Then
+                my_sql_connection.Open()
+                query = "select * from lancelot.cadastro_estoque"
+                cmd = New MySqlCommand(query, my_sql_connection)
+                leitura = cmd.ExecuteReader
+                While leitura.Read
+                    Dim produto_nome = leitura.GetString("NOME_PRODUTO")
+                    cmb_comp_credito.Items.Add(produto_nome)
+                End While
+                my_sql_connection.Close()
+            End If
 
-
-        ElseIf cmb_conta_credito.SelectedItem.ToString = ("Estoque") Then
-            cmb_comp_credito.Items.Clear()
-            cmb_comp_credito.Items.Add("Produto A")
-            cmb_comp_credito.Items.Add("Produto B")
-
-
-        End If
-
+        Catch ex As Exception
+            MsgBox("Erro na Conta Crédito")
+        Finally
+            my_sql_connection.Dispose()
+        End Try
     End Sub
 End Class
