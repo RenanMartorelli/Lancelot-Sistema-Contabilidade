@@ -282,21 +282,18 @@ Partial Class uct_novo_lançamento
         Me.Label11.Size = New System.Drawing.Size(152, 28)
         Me.Label11.TabIndex = 29
         Me.Label11.Text = "Complemento"
-        '
-        'lbl_id_lancamento
-        '
-<<<<<<< HEAD
-        Me.Label12.BackColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer))
-        Me.Label12.Font = New System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.ForeColor = System.Drawing.SystemColors.Menu
-        Me.Label12.Location = New System.Drawing.Point(819, 76)
-        Me.Label12.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(155, 34)
-        Me.Label12.TabIndex = 31
-        Me.Label12.Text = "ID"
-        Me.Label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-=======
+
+        'Me.Label12.BackColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer))
+        'Me.Label12.Font = New System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        'Me.Label12.ForeColor = System.Drawing.SystemColors.Menu
+        'Me.Label12.Location = New System.Drawing.Point(819, 76)
+        'Me.Label12.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        'Me.Label12.Name = "Label12"
+        'Me.Label12.Size = New System.Drawing.Size(155, 34)
+        'Me.Label12.TabIndex = 31
+        'Me.Label12.Text = "ID"
+        'Me.Label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+
         Me.lbl_id_lancamento.BackColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.lbl_id_lancamento.Font = New System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_id_lancamento.ForeColor = System.Drawing.SystemColors.Menu
@@ -306,7 +303,7 @@ Partial Class uct_novo_lançamento
         Me.lbl_id_lancamento.TabIndex = 31
         Me.lbl_id_lancamento.Text = "ID"
         Me.lbl_id_lancamento.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
->>>>>>> 67416839ff8710858d4202cc5618d729c01d2283
+
         '
         'Label13
         '
