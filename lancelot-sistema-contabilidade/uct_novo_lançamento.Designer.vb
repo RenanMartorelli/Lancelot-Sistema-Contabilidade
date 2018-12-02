@@ -42,8 +42,6 @@ Partial Class uct_novo_lançamento
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
-        Me.lbl_id_lancamento = New System.Windows.Forms.Label()
-        Me.Label13 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'txt_valor_unitario
@@ -56,7 +54,7 @@ Partial Class uct_novo_lançamento
         Me.txt_valor_unitario.Margin = New System.Windows.Forms.Padding(2)
         Me.txt_valor_unitario.Name = "txt_valor_unitario"
         Me.txt_valor_unitario.Size = New System.Drawing.Size(118, 28)
-        Me.txt_valor_unitario.TabIndex = 0
+        Me.txt_valor_unitario.TabIndex = 5
         '
         'Label1
         '
@@ -107,7 +105,7 @@ Partial Class uct_novo_lançamento
         Me.cmb_conta_debito.Location = New System.Drawing.Point(88, 230)
         Me.cmb_conta_debito.Name = "cmb_conta_debito"
         Me.cmb_conta_debito.Size = New System.Drawing.Size(226, 21)
-        Me.cmb_conta_debito.TabIndex = 15
+        Me.cmb_conta_debito.TabIndex = 1
         '
         'lbl_debito
         '
@@ -140,7 +138,7 @@ Partial Class uct_novo_lançamento
         Me.cmb_conta_credito.Location = New System.Drawing.Point(503, 230)
         Me.cmb_conta_credito.Name = "cmb_conta_credito"
         Me.cmb_conta_credito.Size = New System.Drawing.Size(226, 21)
-        Me.cmb_conta_credito.TabIndex = 17
+        Me.cmb_conta_credito.TabIndex = 3
         '
         'cmb_comp_debito
         '
@@ -151,7 +149,7 @@ Partial Class uct_novo_lançamento
         Me.cmb_comp_debito.Location = New System.Drawing.Point(88, 300)
         Me.cmb_comp_debito.Name = "cmb_comp_debito"
         Me.cmb_comp_debito.Size = New System.Drawing.Size(226, 21)
-        Me.cmb_comp_debito.TabIndex = 19
+        Me.cmb_comp_debito.TabIndex = 2
         '
         'cmb_comp_credito
         '
@@ -162,7 +160,7 @@ Partial Class uct_novo_lançamento
         Me.cmb_comp_credito.Location = New System.Drawing.Point(504, 300)
         Me.cmb_comp_credito.Name = "cmb_comp_credito"
         Me.cmb_comp_credito.Size = New System.Drawing.Size(226, 21)
-        Me.cmb_comp_credito.TabIndex = 20
+        Me.cmb_comp_credito.TabIndex = 4
         '
         'Label4
         '
@@ -185,7 +183,7 @@ Partial Class uct_novo_lançamento
         Me.txt_valor_total.Margin = New System.Windows.Forms.Padding(2)
         Me.txt_valor_total.Name = "txt_valor_total"
         Me.txt_valor_total.Size = New System.Drawing.Size(118, 28)
-        Me.txt_valor_total.TabIndex = 21
+        Me.txt_valor_total.TabIndex = 7
         '
         'Label5
         '
@@ -208,7 +206,7 @@ Partial Class uct_novo_lançamento
         Me.txt_qtde.Margin = New System.Windows.Forms.Padding(2)
         Me.txt_qtde.Name = "txt_qtde"
         Me.txt_qtde.Size = New System.Drawing.Size(118, 28)
-        Me.txt_qtde.TabIndex = 23
+        Me.txt_qtde.TabIndex = 6
         '
         'Label7
         '
@@ -228,7 +226,7 @@ Partial Class uct_novo_lançamento
         Me.txt_data.Name = "txt_data"
         Me.txt_data.Size = New System.Drawing.Size(67, 20)
         Me.txt_data.SkipLiterals = False
-        Me.txt_data.TabIndex = 26
+        Me.txt_data.TabIndex = 0
         '
         'Label8
         '
@@ -274,36 +272,11 @@ Partial Class uct_novo_lançamento
         Me.Label11.TabIndex = 29
         Me.Label11.Text = "Complemento"
         '
-        'lbl_id_lancamento
-        '
-        Me.lbl_id_lancamento.BackColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer))
-        Me.lbl_id_lancamento.Font = New System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_id_lancamento.ForeColor = System.Drawing.SystemColors.Menu
-        Me.lbl_id_lancamento.Location = New System.Drawing.Point(614, 62)
-        Me.lbl_id_lancamento.Name = "lbl_id_lancamento"
-        Me.lbl_id_lancamento.Size = New System.Drawing.Size(116, 28)
-        Me.lbl_id_lancamento.TabIndex = 31
-        Me.lbl_id_lancamento.Text = "ID"
-        Me.lbl_id_lancamento.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Label13
-        '
-        Me.Label13.AutoSize = True
-        Me.Label13.Font = New System.Drawing.Font("Tw Cen MT", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(540, 65)
-        Me.Label13.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(71, 22)
-        Me.Label13.TabIndex = 32
-        Me.Label13.Text = "Código:"
-        '
         'uct_novo_lançamento
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(234, Byte), Integer), CType(CType(234, Byte), Integer))
-        Me.Controls.Add(Me.Label13)
-        Me.Controls.Add(Me.lbl_id_lancamento)
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.Label8)
@@ -352,6 +325,4 @@ Partial Class uct_novo_lançamento
     Friend WithEvents Label9 As Label
     Friend WithEvents Label10 As Label
     Friend WithEvents Label11 As Label
-    Friend WithEvents lbl_id_lancamento As Label
-    Friend WithEvents Label13 As Label
 End Class
