@@ -126,6 +126,12 @@
     <Compile Include="uct_novo_lançamento.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="uct_registra_estoque.Designer.vb">
+      <DependentUpon>uct_registra_estoque.vb</DependentUpon>
+    </Compile>
+    <Compile Include="uct_registra_estoque.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="frm_login.resx">
@@ -151,6 +157,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="uct_novo_lançamento.resx">
       <DependentUpon>uct_novo_lançamento.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uct_registra_estoque.resx">
+      <DependentUpon>uct_registra_estoque.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
