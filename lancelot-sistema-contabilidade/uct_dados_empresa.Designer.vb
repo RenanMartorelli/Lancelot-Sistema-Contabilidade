@@ -42,7 +42,7 @@ Partial Class uct_dados_empresa
         Me.txt_nome_empresa.Font = New System.Drawing.Font("Tw Cen MT", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_nome_empresa.ForeColor = System.Drawing.SystemColors.Menu
         Me.txt_nome_empresa.Location = New System.Drawing.Point(82, 184)
-        Me.txt_nome_empresa.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txt_nome_empresa.Margin = New System.Windows.Forms.Padding(2)
         Me.txt_nome_empresa.Name = "txt_nome_empresa"
         Me.txt_nome_empresa.Size = New System.Drawing.Size(336, 28)
         Me.txt_nome_empresa.TabIndex = 0
@@ -76,7 +76,7 @@ Partial Class uct_dados_empresa
         Me.txt_segmento.Font = New System.Drawing.Font("Tw Cen MT", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_segmento.ForeColor = System.Drawing.SystemColors.Menu
         Me.txt_segmento.Location = New System.Drawing.Point(82, 258)
-        Me.txt_segmento.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txt_segmento.Margin = New System.Windows.Forms.Padding(2)
         Me.txt_segmento.Name = "txt_segmento"
         Me.txt_segmento.Size = New System.Drawing.Size(327, 28)
         Me.txt_segmento.TabIndex = 5
@@ -88,9 +88,8 @@ Partial Class uct_dados_empresa
         Me.txt_endereço.Font = New System.Drawing.Font("Tw Cen MT", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_endereço.ForeColor = System.Drawing.SystemColors.Menu
         Me.txt_endereço.Location = New System.Drawing.Point(82, 333)
-        Me.txt_endereço.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txt_endereço.Margin = New System.Windows.Forms.Padding(2)
         Me.txt_endereço.Name = "txt_endereço"
-        Me.txt_endereço.PasswordChar = Global.Microsoft.VisualBasic.ChrW(8226)
         Me.txt_endereço.Size = New System.Drawing.Size(397, 28)
         Me.txt_endereço.TabIndex = 7
         '
@@ -112,9 +111,8 @@ Partial Class uct_dados_empresa
         Me.txt_email.Font = New System.Drawing.Font("Tw Cen MT", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_email.ForeColor = System.Drawing.SystemColors.Menu
         Me.txt_email.Location = New System.Drawing.Point(82, 404)
-        Me.txt_email.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txt_email.Margin = New System.Windows.Forms.Padding(2)
         Me.txt_email.Name = "txt_email"
-        Me.txt_email.PasswordChar = Global.Microsoft.VisualBasic.ChrW(8226)
         Me.txt_email.Size = New System.Drawing.Size(227, 28)
         Me.txt_email.TabIndex = 9
         '
@@ -138,7 +136,7 @@ Partial Class uct_dados_empresa
         Me.Label6.Location = New System.Drawing.Point(82, 57)
         Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Padding = New System.Windows.Forms.Padding(3, 3, 3, 3)
+        Me.Label6.Padding = New System.Windows.Forms.Padding(3)
         Me.Label6.Size = New System.Drawing.Size(228, 37)
         Me.Label6.TabIndex = 10
         Me.Label6.Text = "Dados da empresa"
@@ -152,7 +150,7 @@ Partial Class uct_dados_empresa
         Me.btn_editar_dados.Font = New System.Drawing.Font("Tw Cen MT", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_editar_dados.ForeColor = System.Drawing.Color.White
         Me.btn_editar_dados.Location = New System.Drawing.Point(82, 496)
-        Me.btn_editar_dados.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btn_editar_dados.Margin = New System.Windows.Forms.Padding(2)
         Me.btn_editar_dados.Name = "btn_editar_dados"
         Me.btn_editar_dados.Size = New System.Drawing.Size(233, 50)
         Me.btn_editar_dados.TabIndex = 14
@@ -168,7 +166,7 @@ Partial Class uct_dados_empresa
         Me.btn_adicionar_usuario.Font = New System.Drawing.Font("Tw Cen MT", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_adicionar_usuario.ForeColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(164, Byte), Integer), CType(CType(100, Byte), Integer))
         Me.btn_adicionar_usuario.Location = New System.Drawing.Point(346, 496)
-        Me.btn_adicionar_usuario.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btn_adicionar_usuario.Margin = New System.Windows.Forms.Padding(2)
         Me.btn_adicionar_usuario.Name = "btn_adicionar_usuario"
         Me.btn_adicionar_usuario.Size = New System.Drawing.Size(231, 50)
         Me.btn_adicionar_usuario.TabIndex = 15
@@ -191,7 +189,7 @@ Partial Class uct_dados_empresa
         Me.Controls.Add(Me.Atividade)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.txt_nome_empresa)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "uct_dados_empresa"
         Me.Size = New System.Drawing.Size(860, 624)
         Me.ResumeLayout(False)

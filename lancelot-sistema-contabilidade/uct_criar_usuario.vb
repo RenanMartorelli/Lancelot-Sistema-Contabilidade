@@ -19,8 +19,7 @@ Public Class uct_criar_usuario
         Finally
             my_sql_connection.Dispose()
             frm_menu_principal = Me.ParentForm
-            frm_menu_principal.(Me)
-
+            frm_menu_principal.Finaliza_user_control(Me)
         End Try
     End Sub
 

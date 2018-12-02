@@ -22,7 +22,7 @@
     End Sub
 
     Public Sub Finaliza_user_control(uct As UserControl)
-        pan_menu_principal.Controls.Remove(uct)                                 'Remove o userControl imputado
+        pan_menu_principal.Controls.Remove(uct) 'Remove o userControl imputado
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
