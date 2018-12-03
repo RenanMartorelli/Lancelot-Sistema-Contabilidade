@@ -18,6 +18,10 @@ Public Class uct_registra_estoque
     End Sub
 
     Private Sub btn_registrar_Click(sender As Object, e As EventArgs) Handles btn_registrar.Click
+        If txt_nome_estoque.Text = "" Then
+            MsgBox("Digite o nome do estoque a ser registrado", MsgBoxStyle.OkOnly, "Lancelot Contabilidade - Registrar novo estoque")
+            Exit Sub
+        End If
         Try
             my_sql_connection.Open()
             query = "insert into lancelot.cadastro_estoque(NOME_PRODUTO) VALUES ('" & txt_nome_estoque.Text & "')"

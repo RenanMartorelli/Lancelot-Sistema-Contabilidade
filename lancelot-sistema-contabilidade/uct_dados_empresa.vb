@@ -41,8 +41,11 @@ Public Class uct_dados_empresa
             cmd = New MySqlCommand(query, my_sql_connection)
             leitura = cmd.ExecuteReader
             MsgBox("Dados atualizados com sucesso!")
+            my_sql_connection.Close()
         Catch ex As Exception
             MsgBox("DEU RUIM CRÃ")
+        Finally
+            my_sql_connection.Dispose()
         End Try
 
     End Sub

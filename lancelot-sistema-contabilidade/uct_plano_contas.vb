@@ -40,28 +40,12 @@ Public Class uct_plano_contas
     End Sub
 
     Private Sub btn_verificar_saldo_Click(sender As Object, e As EventArgs) Handles btn_verificar_saldo.Click
-        Try
-            Dim somatotal As Double
-            Dim qntd As Integer
-            If dgv_plano_contas.CurrentCell.Value = "Banco Santander" Then
-                my_sql_connection.Open()
-                query = "select * from lancelot.lancamento_banco"
-                cmd = New MySqlCommand(query, my_sql_connection)
-                leitura = cmd.ExecuteReader
-                While leitura.Read
-                    If leitura("TIPO") = "Débito" Then
-                        somatotal += leitura("VALOR")
-                    End If
-                    If leitura("TIPO") = "Crédito" Then
-                        somatotal -= leitura("VALOR")
-                    End If
-                End While
+        'Dim qntd As Integer
+        With dgv_plano_contas
+            If .CurrentCell.Value = "Banco Santander" Or .CurrentCell.Value = "Bancos com movimento" Then
+                txt_valor_total = chamar_saldo_banco()
             End If
-            txt_valor_total.Text = somatotal
-            my_sql_connection.Close()
-        Catch ex As Exception
-
-        End Try
+        End With
     End Sub
 
     Private Sub btn__Click(sender As Object, e As EventArgs) Handles btn_.Click

@@ -47,7 +47,7 @@ Partial Class uct_plano_contas
         Me.Label6.Location = New System.Drawing.Point(79, 57)
         Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Padding = New System.Windows.Forms.Padding(3, 3, 3, 3)
+        Me.Label6.Padding = New System.Windows.Forms.Padding(3)
         Me.Label6.Size = New System.Drawing.Size(203, 37)
         Me.Label6.TabIndex = 10
         Me.Label6.Text = "Plano de  contas"
@@ -70,7 +70,7 @@ Partial Class uct_plano_contas
         Me.txt_valor_total.Font = New System.Drawing.Font("Tw Cen MT", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_valor_total.ForeColor = System.Drawing.SystemColors.Menu
         Me.txt_valor_total.Location = New System.Drawing.Point(74, 555)
-        Me.txt_valor_total.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txt_valor_total.Margin = New System.Windows.Forms.Padding(2)
         Me.txt_valor_total.Name = "txt_valor_total"
         Me.txt_valor_total.Size = New System.Drawing.Size(118, 28)
         Me.txt_valor_total.TabIndex = 21
@@ -93,7 +93,7 @@ Partial Class uct_plano_contas
         Me.txt_qtde.Font = New System.Drawing.Font("Tw Cen MT", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_qtde.ForeColor = System.Drawing.SystemColors.Menu
         Me.txt_qtde.Location = New System.Drawing.Point(229, 555)
-        Me.txt_qtde.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txt_qtde.Margin = New System.Windows.Forms.Padding(2)
         Me.txt_qtde.Name = "txt_qtde"
         Me.txt_qtde.Size = New System.Drawing.Size(125, 28)
         Me.txt_qtde.TabIndex = 23
@@ -103,7 +103,7 @@ Partial Class uct_plano_contas
         Me.dgv_plano_contas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgv_plano_contas.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.codigo, Me.nome_conta, Me.id_estoque})
         Me.dgv_plano_contas.Location = New System.Drawing.Point(76, 119)
-        Me.dgv_plano_contas.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.dgv_plano_contas.Margin = New System.Windows.Forms.Padding(2)
         Me.dgv_plano_contas.Name = "dgv_plano_contas"
         Me.dgv_plano_contas.RowTemplate.Height = 24
         Me.dgv_plano_contas.Size = New System.Drawing.Size(704, 293)
@@ -133,7 +133,7 @@ Partial Class uct_plano_contas
         Me.btn_verificar_saldo.Font = New System.Drawing.Font("Tw Cen MT", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_verificar_saldo.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.btn_verificar_saldo.Location = New System.Drawing.Point(74, 465)
-        Me.btn_verificar_saldo.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btn_verificar_saldo.Margin = New System.Windows.Forms.Padding(2)
         Me.btn_verificar_saldo.Name = "btn_verificar_saldo"
         Me.btn_verificar_saldo.Size = New System.Drawing.Size(157, 46)
         Me.btn_verificar_saldo.TabIndex = 27
@@ -149,7 +149,7 @@ Partial Class uct_plano_contas
         Me.btn_.Font = New System.Drawing.Font("Tw Cen MT", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_.ForeColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(164, Byte), Integer), CType(CType(100, Byte), Integer))
         Me.btn_.Location = New System.Drawing.Point(544, 508)
-        Me.btn_.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btn_.Margin = New System.Windows.Forms.Padding(2)
         Me.btn_.Name = "btn_"
         Me.btn_.Size = New System.Drawing.Size(225, 46)
         Me.btn_.TabIndex = 28
@@ -162,7 +162,7 @@ Partial Class uct_plano_contas
         Me.Button1.FlatAppearance.BorderSize = 0
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Location = New System.Drawing.Point(463, 457)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(2)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(2, 138)
         Me.Button1.TabIndex = 29
@@ -196,7 +196,7 @@ Partial Class uct_plano_contas
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.txt_valor_total)
         Me.Controls.Add(Me.Label6)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "uct_plano_contas"
         Me.Size = New System.Drawing.Size(860, 624)
         CType(Me.dgv_plano_contas, System.ComponentModel.ISupportInitialize).EndInit()

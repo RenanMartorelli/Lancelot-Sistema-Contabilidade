@@ -23,7 +23,28 @@ Module mod_banco_de_dados
         End Try
     End Sub
 
-
+    Public Function chamar_saldo_banco()
+        Dim somatotal As Double
+        Try
+            my_sql_connection.Open()
+            query = "select * from lancelot.lancamento_banco"
+            cmd = New MySqlCommand(query, my_sql_connection)
+            leitura = cmd.ExecuteReader
+            While leitura.Read
+                If leitura("TIPO") = "Débito" Then
+                    somatotal += leitura("VALOR")
+                ElseIf leitura("TIPO") = "Crédito" Then
+                    somatotal -= leitura("VALOR")
+                End If
+            End While
+            my_sql_connection.Close()
+        Catch ex As Exception
+            MsgBox("Nao funcionou T.T")
+        Finally
+            my_sql_connection.Dispose()
+        End Try
+        Return somatotal
+    End Function
 
 End Module
 
