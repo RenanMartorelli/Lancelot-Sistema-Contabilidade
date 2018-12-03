@@ -282,12 +282,18 @@ Partial Class uct_novo_lançamento
         Me.Label11.Size = New System.Drawing.Size(152, 28)
         Me.Label11.TabIndex = 29
         Me.Label11.Text = "Complemento"
+<<<<<<< HEAD
 
         '
         'lbl_id_lancamento
         '
 
 
+=======
+        '
+        'lbl_id_lancamento
+        '
+>>>>>>> e33b9be396a4918c6fa1154bfd85c531948a2917
         'Me.Label12.BackColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer))
         'Me.Label12.Font = New System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         'Me.Label12.ForeColor = System.Drawing.SystemColors.Menu
@@ -298,7 +304,10 @@ Partial Class uct_novo_lançamento
         'Me.Label12.TabIndex = 31
         'Me.Label12.Text = "ID"
         'Me.Label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+<<<<<<< HEAD
 
+=======
+>>>>>>> e33b9be396a4918c6fa1154bfd85c531948a2917
 
         Me.lbl_id_lancamento.BackColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.lbl_id_lancamento.Font = New System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -392,3 +401,4 @@ Partial Class uct_novo_lançamento
     Friend WithEvents Label13 As Label
     Friend WithEvents Button1 As Button
 End Class
+

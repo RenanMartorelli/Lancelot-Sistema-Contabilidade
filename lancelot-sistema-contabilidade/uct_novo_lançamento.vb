@@ -74,6 +74,12 @@ Public Class uct_novo_lançamento
 
             ElseIf cmb_conta_credito.SelectedItem = "Estoque" Then
                 my_sql_connection.Open()
+
+                'select tbestoque where produto ='" &cmb_comp_credito.selecteditem & "'"
+
+
+
+
                 query = "insert into lancelot.lancamento_estoque(DATA_CRIAÇÃO, NOME_PRODUTO, QTD, VALOR_UNI, VALOR_TOTAL, TIPO) VALUES ('" & CDate(txt_data.Text) & "','" & cmb_comp_credito.SelectedItem.ToString & "' , '" & CInt(txt_qtde.Text) & "' , '" & CDbl(txt_valor_unitario.Text) & "', '" & CDbl(txt_valor_total.Text) & "' , '" & lbl_credito.Text & "')"
                 cmd = New MySqlCommand(query, my_sql_connection)
                 'insert o comando na linha de comando do mysql
