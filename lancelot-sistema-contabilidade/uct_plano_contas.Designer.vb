@@ -105,6 +105,7 @@ Partial Class uct_plano_contas
         Me.dgv_plano_contas.Location = New System.Drawing.Point(76, 119)
         Me.dgv_plano_contas.Margin = New System.Windows.Forms.Padding(2)
         Me.dgv_plano_contas.Name = "dgv_plano_contas"
+        Me.dgv_plano_contas.ReadOnly = True
         Me.dgv_plano_contas.RowTemplate.Height = 24
         Me.dgv_plano_contas.Size = New System.Drawing.Size(704, 293)
         Me.dgv_plano_contas.TabIndex = 25
@@ -113,17 +114,20 @@ Partial Class uct_plano_contas
         '
         Me.codigo.HeaderText = "Código"
         Me.codigo.Name = "codigo"
+        Me.codigo.ReadOnly = True
         '
         'nome_conta
         '
         Me.nome_conta.HeaderText = "Nome da conta"
         Me.nome_conta.Name = "nome_conta"
+        Me.nome_conta.ReadOnly = True
         Me.nome_conta.Width = 500
         '
         'id_estoque
         '
         Me.id_estoque.HeaderText = "id_estoque"
         Me.id_estoque.Name = "id_estoque"
+        Me.id_estoque.ReadOnly = True
         '
         'btn_verificar_saldo
         '
