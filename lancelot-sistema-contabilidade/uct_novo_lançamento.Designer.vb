@@ -78,7 +78,7 @@ Partial Class uct_novo_lançamento
         Me.Label6.ForeColor = System.Drawing.Color.White
         Me.Label6.Location = New System.Drawing.Point(109, 70)
         Me.Label6.Name = "Label6"
-        Me.Label6.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Label6.Padding = New System.Windows.Forms.Padding(4)
         Me.Label6.Size = New System.Drawing.Size(397, 47)
         Me.Label6.TabIndex = 10
         Me.Label6.Text = "Registrar novo lançamento"
@@ -109,7 +109,7 @@ Partial Class uct_novo_lançamento
         Me.cmb_conta_debito.IntegralHeight = False
         Me.cmb_conta_debito.ItemHeight = 21
         Me.cmb_conta_debito.Location = New System.Drawing.Point(117, 283)
-        Me.cmb_conta_debito.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cmb_conta_debito.Margin = New System.Windows.Forms.Padding(4)
         Me.cmb_conta_debito.Name = "cmb_conta_debito"
         Me.cmb_conta_debito.Size = New System.Drawing.Size(300, 29)
         Me.cmb_conta_debito.TabIndex = 15
@@ -117,20 +117,20 @@ Partial Class uct_novo_lançamento
         'lbl_debito
         '
         Me.lbl_debito.AutoSize = True
-        Me.lbl_debito.Font = New System.Drawing.Font("Tw Cen MT", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_debito.Font = New System.Drawing.Font("Tw Cen MT", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_debito.Location = New System.Drawing.Point(113, 202)
         Me.lbl_debito.Name = "lbl_debito"
-        Me.lbl_debito.Size = New System.Drawing.Size(77, 28)
+        Me.lbl_debito.Size = New System.Drawing.Size(90, 33)
         Me.lbl_debito.TabIndex = 16
         Me.lbl_debito.Text = "Débito"
         '
         'lbl_credito
         '
         Me.lbl_credito.AutoSize = True
-        Me.lbl_credito.Font = New System.Drawing.Font("Tw Cen MT", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_credito.Font = New System.Drawing.Font("Tw Cen MT", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_credito.Location = New System.Drawing.Point(667, 202)
         Me.lbl_credito.Name = "lbl_credito"
-        Me.lbl_credito.Size = New System.Drawing.Size(84, 28)
+        Me.lbl_credito.Size = New System.Drawing.Size(97, 33)
         Me.lbl_credito.TabIndex = 18
         Me.lbl_credito.Text = "Crédito"
         '
@@ -144,7 +144,7 @@ Partial Class uct_novo_lançamento
         Me.cmb_conta_credito.IntegralHeight = False
         Me.cmb_conta_credito.ItemHeight = 21
         Me.cmb_conta_credito.Location = New System.Drawing.Point(671, 283)
-        Me.cmb_conta_credito.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cmb_conta_credito.Margin = New System.Windows.Forms.Padding(4)
         Me.cmb_conta_credito.Name = "cmb_conta_credito"
         Me.cmb_conta_credito.Size = New System.Drawing.Size(300, 29)
         Me.cmb_conta_credito.TabIndex = 17
@@ -159,7 +159,7 @@ Partial Class uct_novo_lançamento
         Me.cmb_comp_debito.IntegralHeight = False
         Me.cmb_comp_debito.ItemHeight = 21
         Me.cmb_comp_debito.Location = New System.Drawing.Point(117, 369)
-        Me.cmb_comp_debito.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cmb_comp_debito.Margin = New System.Windows.Forms.Padding(4)
         Me.cmb_comp_debito.Name = "cmb_comp_debito"
         Me.cmb_comp_debito.Size = New System.Drawing.Size(300, 29)
         Me.cmb_comp_debito.TabIndex = 19
@@ -174,7 +174,7 @@ Partial Class uct_novo_lançamento
         Me.cmb_comp_credito.IntegralHeight = False
         Me.cmb_comp_credito.ItemHeight = 21
         Me.cmb_comp_credito.Location = New System.Drawing.Point(672, 369)
-        Me.cmb_comp_credito.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cmb_comp_credito.Margin = New System.Windows.Forms.Padding(4)
         Me.cmb_comp_credito.Name = "cmb_comp_credito"
         Me.cmb_comp_credito.Size = New System.Drawing.Size(300, 29)
         Me.cmb_comp_credito.TabIndex = 20
@@ -235,11 +235,14 @@ Partial Class uct_novo_lançamento
         '
         'txt_data
         '
+        Me.txt_data.BackColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer))
+        Me.txt_data.Font = New System.Drawing.Font("Tw Cen MT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_data.ForeColor = System.Drawing.SystemColors.Info
         Me.txt_data.Location = New System.Drawing.Point(221, 160)
-        Me.txt_data.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txt_data.Margin = New System.Windows.Forms.Padding(4)
         Me.txt_data.Mask = "99/99/9999"
         Me.txt_data.Name = "txt_data"
-        Me.txt_data.Size = New System.Drawing.Size(72, 22)
+        Me.txt_data.Size = New System.Drawing.Size(114, 29)
         Me.txt_data.SkipLiterals = False
         Me.txt_data.TabIndex = 26
         '
@@ -282,49 +285,24 @@ Partial Class uct_novo_lançamento
         Me.Label11.Size = New System.Drawing.Size(152, 28)
         Me.Label11.TabIndex = 29
         Me.Label11.Text = "Complemento"
-<<<<<<< HEAD
-
         '
         'lbl_id_lancamento
         '
-
-
-=======
-        '
-        'lbl_id_lancamento
-        '
->>>>>>> e33b9be396a4918c6fa1154bfd85c531948a2917
-        'Me.Label12.BackColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer))
-        'Me.Label12.Font = New System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        'Me.Label12.ForeColor = System.Drawing.SystemColors.Menu
-        'Me.Label12.Location = New System.Drawing.Point(819, 76)
-        'Me.Label12.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        'Me.Label12.Name = "Label12"
-        'Me.Label12.Size = New System.Drawing.Size(155, 34)
-        'Me.Label12.TabIndex = 31
-        'Me.Label12.Text = "ID"
-        'Me.Label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-<<<<<<< HEAD
-
-=======
->>>>>>> e33b9be396a4918c6fa1154bfd85c531948a2917
-
         Me.lbl_id_lancamento.BackColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.lbl_id_lancamento.Font = New System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_id_lancamento.ForeColor = System.Drawing.SystemColors.Menu
-        Me.lbl_id_lancamento.Location = New System.Drawing.Point(614, 62)
+        Me.lbl_id_lancamento.Location = New System.Drawing.Point(648, 89)
         Me.lbl_id_lancamento.Name = "lbl_id_lancamento"
         Me.lbl_id_lancamento.Size = New System.Drawing.Size(116, 28)
         Me.lbl_id_lancamento.TabIndex = 31
         Me.lbl_id_lancamento.Text = "ID"
         Me.lbl_id_lancamento.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-
         '
         'Label13
         '
         Me.Label13.AutoSize = True
         Me.Label13.Font = New System.Drawing.Font("Tw Cen MT", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(720, 80)
+        Me.Label13.Location = New System.Drawing.Point(647, 61)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(90, 28)
         Me.Label13.TabIndex = 32

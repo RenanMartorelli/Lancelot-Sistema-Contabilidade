@@ -118,4 +118,8 @@
         pan_menu_principal.Controls.Add(uct_relatorio)
         uct_relatorio.BringToFront()
     End Sub
+
+    Private Sub Panel5_Paint(sender As Object, e As PaintEventArgs)
+
+    End Sub
 End Class

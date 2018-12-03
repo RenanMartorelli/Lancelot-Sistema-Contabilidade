@@ -28,8 +28,16 @@ Public Class uct_novo_lançamento
 
 
     Private Sub btn_confirmar_Click(sender As Object, e As EventArgs) Handles btn_confirmar.Click
-        Try
+        If cmb_conta_credito.SelectedItem = "Banco" Then 'Validação -> não pode tirar mais do que tem no saldo
+            If CInt(txt_valor_total.Text) > Then
+            End If
+        End If
 
+        Try
+            If cmb_conta_debito.SelectedItem = cmb_conta_credito.SelectedItem Then
+                MsgBox("Os tipos de conta de crédito e débito devem ser diferentes!")
+                Exit Sub
+            End If
             If cmb_conta_debito.SelectedItem = "Estoque" Then
 
                 my_sql_connection.Open()
@@ -113,6 +121,7 @@ Public Class uct_novo_lançamento
                 cmb_comp_debito.Items.Add("Santander")
 
             ElseIf cmb_conta_debito.SelectedItem.ToString = ("Estoque") Then
+                cmb_comp_debito.Items.Clear()
                 my_sql_connection.Open()
                 query = "select * from lancelot.cadastro_estoque"
                 cmd = New MySqlCommand(query, my_sql_connection)
@@ -131,13 +140,15 @@ Public Class uct_novo_lançamento
     End Sub
 
     Private Sub cmb_conta_credito_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmb_conta_credito.SelectedIndexChanged
-        Try
-            If cmb_conta_credito.SelectedItem.ToString = ("Banco") Then
-                cmb_comp_credito.Items.Clear()
-                cmb_comp_credito.Items.Add("Santander")
+        'Try
+        If cmb_conta_credito.SelectedItem.ToString = ("Banco") Then
 
-            ElseIf cmb_conta_credito.SelectedItem.ToString = ("Estoque") Then
-                my_sql_connection.Open()
+            cmb_comp_credito.Items.Clear()
+            cmb_comp_credito.Items.Add("Santander")
+
+        ElseIf cmb_conta_credito.SelectedItem.ToString = ("Estoque") Then
+            cmb_comp_credito.Items.Clear()
+            my_sql_connection.Open()
                 query = "select * from lancelot.cadastro_estoque"
                 cmd = New MySqlCommand(query, my_sql_connection)
                 leitura = cmd.ExecuteReader
@@ -148,10 +159,22 @@ Public Class uct_novo_lançamento
                 my_sql_connection.Close()
             End If
 
-        Catch ex As Exception
-            MsgBox("Erro na Conta Crédito")
-        Finally
-            my_sql_connection.Dispose()
-        End Try
+        ' Catch ex As Exception
+        '   MsgBox("Erro na Conta Crédito")
+        '  Finally
+        '    my_sql_connection.Dispose()
+        ' End Try
+    End Sub
+
+    Private Sub txt_qtde_TextChanged(sender As Object, e As EventArgs) Handles txt_qtde.TextChanged
+        If Not String.IsNullOrEmpty(txt_valor_unitario.Text) And Not String.IsNullOrEmpty(txt_qtde.Text) Then
+            txt_valor_total.Text = (CInt(txt_qtde.Text) * CDbl(txt_valor_unitario.Text))
+        End If
+    End Sub
+
+    Private Sub txt_valor_unitario_TextChanged(sender As Object, e As EventArgs) Handles txt_valor_unitario.TextChanged
+        If Not String.IsNullOrEmpty(txt_qtde.Text) And Not String.IsNullOrEmpty(txt_valor_unitario.Text) Then
+            txt_valor_total.Text = (CInt(txt_qtde.Text) * CDbl(txt_valor_unitario.Text))
+        End If
     End Sub
 End Class

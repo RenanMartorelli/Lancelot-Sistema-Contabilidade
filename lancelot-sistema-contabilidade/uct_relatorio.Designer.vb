@@ -24,14 +24,14 @@ Partial Class uct_relatorio
     Private Sub InitializeComponent()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.dgv_relatório = New System.Windows.Forms.DataGridView()
+        Me.rdb_venda_bruta = New System.Windows.Forms.RadioButton()
+        Me.rdb_vendas_lucro = New System.Windows.Forms.RadioButton()
+        Me.cmb_produtos = New System.Windows.Forms.ComboBox()
         Me.data_lancamento = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.nome_produto = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.quantidade_vendida = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.valor_venda = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.valor_total = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.rdb_venda_bruta = New System.Windows.Forms.RadioButton()
-        Me.rdb_vendas_lucro = New System.Windows.Forms.RadioButton()
-        Me.cmb_produtos = New System.Windows.Forms.ComboBox()
         CType(Me.dgv_relatório, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -55,34 +55,8 @@ Partial Class uct_relatorio
         Me.dgv_relatório.Location = New System.Drawing.Point(95, 222)
         Me.dgv_relatório.Name = "dgv_relatório"
         Me.dgv_relatório.RowTemplate.Height = 24
-        Me.dgv_relatório.Size = New System.Drawing.Size(946, 415)
+        Me.dgv_relatório.Size = New System.Drawing.Size(928, 415)
         Me.dgv_relatório.TabIndex = 25
-        '
-        'data_lancamento
-        '
-        Me.data_lancamento.HeaderText = "Data"
-        Me.data_lancamento.Name = "data_lancamento"
-        '
-        'nome_produto
-        '
-        Me.nome_produto.HeaderText = "Nome do produto"
-        Me.nome_produto.Name = "nome_produto"
-        Me.nome_produto.Width = 500
-        '
-        'quantidade_vendida
-        '
-        Me.quantidade_vendida.HeaderText = "Quant. Vendida"
-        Me.quantidade_vendida.Name = "quantidade_vendida"
-        '
-        'valor_venda
-        '
-        Me.valor_venda.HeaderText = "Valor venda"
-        Me.valor_venda.Name = "valor_venda"
-        '
-        'valor_total
-        '
-        Me.valor_total.HeaderText = "Valor total"
-        Me.valor_total.Name = "valor_total"
         '
         'rdb_venda_bruta
         '
@@ -119,6 +93,34 @@ Partial Class uct_relatorio
         Me.cmb_produtos.Size = New System.Drawing.Size(438, 35)
         Me.cmb_produtos.TabIndex = 28
         '
+        'data_lancamento
+        '
+        Me.data_lancamento.HeaderText = "Data"
+        Me.data_lancamento.Name = "data_lancamento"
+        '
+        'nome_produto
+        '
+        Me.nome_produto.HeaderText = "Nome do produto"
+        Me.nome_produto.Name = "nome_produto"
+        Me.nome_produto.Width = 300
+        '
+        'quantidade_vendida
+        '
+        Me.quantidade_vendida.HeaderText = "Quant. Vendida"
+        Me.quantidade_vendida.Name = "quantidade_vendida"
+        Me.quantidade_vendida.Width = 75
+        '
+        'valor_venda
+        '
+        Me.valor_venda.HeaderText = "Valor venda"
+        Me.valor_venda.Name = "valor_venda"
+        Me.valor_venda.Width = 75
+        '
+        'valor_total
+        '
+        Me.valor_total.HeaderText = "Valor total"
+        Me.valor_total.Name = "valor_total"
+        '
         'uct_relatorio
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -139,12 +141,12 @@ Partial Class uct_relatorio
     End Sub
     Friend WithEvents Label6 As Label
     Friend WithEvents dgv_relatório As DataGridView
+    Friend WithEvents rdb_venda_bruta As RadioButton
+    Friend WithEvents rdb_vendas_lucro As RadioButton
+    Friend WithEvents cmb_produtos As ComboBox
     Friend WithEvents data_lancamento As DataGridViewTextBoxColumn
     Friend WithEvents nome_produto As DataGridViewTextBoxColumn
     Friend WithEvents quantidade_vendida As DataGridViewTextBoxColumn
     Friend WithEvents valor_venda As DataGridViewTextBoxColumn
     Friend WithEvents valor_total As DataGridViewTextBoxColumn
-    Friend WithEvents rdb_venda_bruta As RadioButton
-    Friend WithEvents rdb_vendas_lucro As RadioButton
-    Friend WithEvents cmb_produtos As ComboBox
 End Class

@@ -31,12 +31,17 @@ Public Class uct_dados_empresa
     Dim frm_menu_principal As frm_menu_principal
     Private Sub btn_adicionar_usuario_Click(sender As Object, e As EventArgs) Handles btn_adicionar_usuario.Click
 
-        End If
 
         frm_menu_principal = Me.ParentForm
         frm_menu_principal.chama_novo_usuario()
     End Sub
     Private Sub btn_editar_dados_Click(sender As Object, e As EventArgs) Handles btn_editar_dados.Click
+
+        If String.IsNullOrEmpty(txt_email.Text) Or String.IsNullOrEmpty(txt_segmento.Text) Or String.IsNullOrEmpty(txt_nome_empresa.Text) Or String.IsNullOrEmpty(txt_endereço.Text) Then
+            MsgBox("Há algum campo não preenchido!")
+            Exit Sub
+
+        End If
         'Query update dos valores do input na tabela dados_empressa no BD
         Try
             my_sql_connection.Open()
