@@ -8,6 +8,9 @@ Public Class uct_dados_empresa
             txt_segmento.Enabled = False
             btn_adicionar_usuario.Enabled = False
             btn_editar_dados.Enabled = False
+            rdb_media.Enabled = False
+            rdb_PEPS.Enabled = False
+            rdb_UEPS.Enabled = False
         End If
 
         Try
