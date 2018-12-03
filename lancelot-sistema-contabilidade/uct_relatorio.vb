@@ -78,50 +78,7 @@ Public Class uct_relatorio
     End Sub
 
 
-    Private Sub alheia()
-        Try
-            Dim data_lancamento As String
-            Dim quant As Integer
-            Dim valor_uni As Integer
-            Dim valor_total As Integer
-            my_sql_connection.Open()
-            'query = "select * from lancelot.lancamento_estoque WHERE NOME_PRODUTO= '" & cmb_comp_cred.selectedItem.toString() & "' ORDER BY DATA_CRIAÇÃO ASC"
-            Dim quant_produto_vendido = 60
 
-
-            cmd = New MySqlCommand(query, my_sql_connection)
-            leitura = cmd.ExecuteReader
-            While leitura.Read
-                'AQUI ENTRA OUTRO WHILE QUE VAI ATÉ A QUANTIDADE DE ITENS VENDIDOS CHEGAR EM 0
-                Dim quant_restante_estoque = leitura("QTD")
-                Dim id_lancamento = leitura("IDESTOQUE")
-                'quant_produto_vendido -= quant_restante_estoque
-                While quant_restante_estoque <> 0
-                    'quantidade_vendida -= 1
-
-
-
-                End While
-
-                Call retira_e_atualiza_estoque(id_lancamento)
-
-
-                With dgv_relatório
-                    .Rows.Add(data_lancamento, nome_produto, quant, valor_uni, valor_total)
-                End With
-            End While
-            my_sql_connection.Close()
-        Catch ex As Exception
-            MsgBox("VOCÊ NAO SABE FAZER NADA QUE N TENHA ERRO?")
-        End Try
-    End Sub
-
-    Private Sub retira_e_atualiza_estoque(id_lancamento As Integer)
-        my_sql_connection.Open()
-        '  query = "update lancelot.lancamento_estoque set QTD='" & txt_nome_empresa.Text & "', EMAIL='" & txt_email.Text & "', ENDERECO='" & txt_endereço.Text & "', ATIVIDADE='" & txt_segmento.Text & "' "
-        cmd = New MySqlCommand(query, my_sql_connection)
-
-    End Sub
 End Class
 
 

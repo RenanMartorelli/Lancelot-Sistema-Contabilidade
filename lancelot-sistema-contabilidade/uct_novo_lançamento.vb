@@ -74,7 +74,7 @@ Public Class uct_novo_lançamento
 
             ElseIf cmb_conta_credito.SelectedItem = "Estoque" Then
                 my_sql_connection.Open()
-
+                Call credito_estoque()
                 'select tbestoque where produto ='" &cmb_comp_credito.selecteditem & "'"
 
 
@@ -105,6 +105,52 @@ Public Class uct_novo_lançamento
         End Try
     End Sub
 
+    Private Sub credito_estoque()
+        Try
+
+            my_sql_connection.Open()
+            'query = "select * from lancelot.lancamento_estoque WHERE NOME_PRODUTO= '" & cmb_comp_cred.selectedItem.toString() & "' ORDER BY DATA_CRIAÇÃO ASC"
+            Dim quant_produto_vendido = 60 'txt_qtde.text
+            Dim zerou_vendas As Boolean
+            zerou_vendas = False
+
+            cmd = New MySqlCommand(query, my_sql_connection)
+            leitura = cmd.ExecuteReader
+            While leitura.Read
+                If zerou_vendas = True Then
+                    Exit While
+                End If
+                Dim quant_restante_estoque = leitura("QTD")
+                Dim id_lancamento = leitura("IDESTOQUE")
+                Dim valor_uni = leitura("VALOR_UNI")
+                Dim valor_custo_total As Double
+                While quant_restante_estoque <> 0
+                    If quant_produto_vendido = 0 Then
+                        zerou_vendas = True
+                        Exit While
+                    End If
+                    valor_custo_total += valor_uni
+                    quant_produto_vendido -= 1
+                    quant_restante_estoque -= 1
+
+                End While
+
+
+
+
+                Call retira_e_atualiza_estoque(id_lancamento, quant_restante_estoque, valor_uni)
+
+            End While
+            my_sql_connection.Close()
+        Catch ex As Exception
+            MsgBox("VOCÊ NAO SABE FAZER NADA QUE N TENHA ERRO?")
+        End Try
+    End Sub
+
+
+
+
+
     Private Sub cmb_conta_debito_SelectedValueChanged(sender As Object, e As EventArgs) Handles cmb_conta_debito.SelectedValueChanged
         Try
 
@@ -121,6 +167,8 @@ Public Class uct_novo_lançamento
                     Dim produto_nome = leitura.GetString("NOME_PRODUTO")
                     cmb_comp_debito.Items.Add(produto_nome)
                 End While
+
+                ' insert na nova tabela os valores que escrevemos dinâmicamente
                 my_sql_connection.Close()
             End If
         Catch ex As Exception
@@ -128,6 +176,13 @@ Public Class uct_novo_lançamento
         Finally
             my_sql_connection.Dispose()
         End Try
+    End Sub
+
+    Private Sub retira_e_atualiza_estoque(id_lancamento As Integer, quant_restante_estoque As Integer, valor_uni As Integer)
+        my_sql_connection.Open()
+        query = "update lancelot.lancamento_estoque set QTD=" & quant_restante_estoque & ",VALOR_TOTAL=" & (valor_uni * quant_restante_estoque) & " WHERE IDESTOQUE=" & id_lancamento & ""
+        cmd = New MySqlCommand(query, my_sql_connection)
+        my_sql_connection.Close()
     End Sub
 
     Private Sub cmb_conta_credito_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmb_conta_credito.SelectedIndexChanged
