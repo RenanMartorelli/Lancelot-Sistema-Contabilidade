@@ -30,6 +30,9 @@ Public Class uct_dados_empresa
     End Sub
     Dim frm_menu_principal As frm_menu_principal
     Private Sub btn_adicionar_usuario_Click(sender As Object, e As EventArgs) Handles btn_adicionar_usuario.Click
+
+        End If
+
         frm_menu_principal = Me.ParentForm
         frm_menu_principal.chama_novo_usuario()
     End Sub

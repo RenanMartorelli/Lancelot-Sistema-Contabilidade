@@ -41,20 +41,19 @@ Partial Class uct_dados_empresa
         Me.txt_nome_empresa.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txt_nome_empresa.Font = New System.Drawing.Font("Tw Cen MT", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_nome_empresa.ForeColor = System.Drawing.SystemColors.Menu
-        Me.txt_nome_empresa.Location = New System.Drawing.Point(82, 184)
-        Me.txt_nome_empresa.Margin = New System.Windows.Forms.Padding(2)
+        Me.txt_nome_empresa.Location = New System.Drawing.Point(109, 226)
+        Me.txt_nome_empresa.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txt_nome_empresa.Name = "txt_nome_empresa"
-        Me.txt_nome_empresa.Size = New System.Drawing.Size(336, 28)
+        Me.txt_nome_empresa.Size = New System.Drawing.Size(447, 33)
         Me.txt_nome_empresa.TabIndex = 0
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Tw Cen MT", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(83, 154)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label1.Location = New System.Drawing.Point(111, 190)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(154, 22)
+        Me.Label1.Size = New System.Drawing.Size(198, 28)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Nome da empresa"
         '
@@ -62,10 +61,9 @@ Partial Class uct_dados_empresa
         '
         Me.Atividade.AutoSize = True
         Me.Atividade.Font = New System.Drawing.Font("Tw Cen MT", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Atividade.Location = New System.Drawing.Point(83, 233)
-        Me.Atividade.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Atividade.Location = New System.Drawing.Point(111, 287)
         Me.Atividade.Name = "Atividade"
-        Me.Atividade.Size = New System.Drawing.Size(87, 22)
+        Me.Atividade.Size = New System.Drawing.Size(111, 28)
         Me.Atividade.TabIndex = 4
         Me.Atividade.Text = "Segmento"
         '
@@ -75,10 +73,10 @@ Partial Class uct_dados_empresa
         Me.txt_segmento.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txt_segmento.Font = New System.Drawing.Font("Tw Cen MT", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_segmento.ForeColor = System.Drawing.SystemColors.Menu
-        Me.txt_segmento.Location = New System.Drawing.Point(82, 258)
-        Me.txt_segmento.Margin = New System.Windows.Forms.Padding(2)
+        Me.txt_segmento.Location = New System.Drawing.Point(109, 318)
+        Me.txt_segmento.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txt_segmento.Name = "txt_segmento"
-        Me.txt_segmento.Size = New System.Drawing.Size(327, 28)
+        Me.txt_segmento.Size = New System.Drawing.Size(349, 33)
         Me.txt_segmento.TabIndex = 5
         '
         'txt_endereço
@@ -87,20 +85,19 @@ Partial Class uct_dados_empresa
         Me.txt_endereço.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txt_endereço.Font = New System.Drawing.Font("Tw Cen MT", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_endereço.ForeColor = System.Drawing.SystemColors.Menu
-        Me.txt_endereço.Location = New System.Drawing.Point(82, 333)
-        Me.txt_endereço.Margin = New System.Windows.Forms.Padding(2)
+        Me.txt_endereço.Location = New System.Drawing.Point(109, 410)
+        Me.txt_endereço.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txt_endereço.Name = "txt_endereço"
-        Me.txt_endereço.Size = New System.Drawing.Size(397, 28)
+        Me.txt_endereço.Size = New System.Drawing.Size(562, 33)
         Me.txt_endereço.TabIndex = 7
         '
         'Label4
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Tw Cen MT", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(83, 308)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label4.Location = New System.Drawing.Point(111, 379)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(81, 22)
+        Me.Label4.Size = New System.Drawing.Size(105, 28)
         Me.Label4.TabIndex = 6
         Me.Label4.Text = "Endereço"
         '
@@ -110,20 +107,19 @@ Partial Class uct_dados_empresa
         Me.txt_email.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txt_email.Font = New System.Drawing.Font("Tw Cen MT", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_email.ForeColor = System.Drawing.SystemColors.Menu
-        Me.txt_email.Location = New System.Drawing.Point(82, 404)
-        Me.txt_email.Margin = New System.Windows.Forms.Padding(2)
+        Me.txt_email.Location = New System.Drawing.Point(109, 497)
+        Me.txt_email.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txt_email.Name = "txt_email"
-        Me.txt_email.Size = New System.Drawing.Size(227, 28)
+        Me.txt_email.Size = New System.Drawing.Size(486, 33)
         Me.txt_email.TabIndex = 9
         '
         'Label5
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Tw Cen MT", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(83, 379)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label5.Location = New System.Drawing.Point(111, 466)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(60, 22)
+        Me.Label5.Size = New System.Drawing.Size(76, 28)
         Me.Label5.TabIndex = 8
         Me.Label5.Text = "E-mail"
         '
@@ -133,11 +129,10 @@ Partial Class uct_dados_empresa
         Me.Label6.BackColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(164, Byte), Integer), CType(CType(100, Byte), Integer))
         Me.Label6.Font = New System.Drawing.Font("Tw Cen MT", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.White
-        Me.Label6.Location = New System.Drawing.Point(82, 57)
-        Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label6.Location = New System.Drawing.Point(109, 70)
         Me.Label6.Name = "Label6"
-        Me.Label6.Padding = New System.Windows.Forms.Padding(3)
-        Me.Label6.Size = New System.Drawing.Size(228, 37)
+        Me.Label6.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Label6.Size = New System.Drawing.Size(283, 47)
         Me.Label6.TabIndex = 10
         Me.Label6.Text = "Dados da empresa"
         '
@@ -149,10 +144,10 @@ Partial Class uct_dados_empresa
         Me.btn_editar_dados.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_editar_dados.Font = New System.Drawing.Font("Tw Cen MT", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_editar_dados.ForeColor = System.Drawing.Color.White
-        Me.btn_editar_dados.Location = New System.Drawing.Point(82, 496)
-        Me.btn_editar_dados.Margin = New System.Windows.Forms.Padding(2)
+        Me.btn_editar_dados.Location = New System.Drawing.Point(109, 610)
+        Me.btn_editar_dados.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btn_editar_dados.Name = "btn_editar_dados"
-        Me.btn_editar_dados.Size = New System.Drawing.Size(233, 50)
+        Me.btn_editar_dados.Size = New System.Drawing.Size(311, 62)
         Me.btn_editar_dados.TabIndex = 14
         Me.btn_editar_dados.Text = "Atualizar"
         Me.btn_editar_dados.UseVisualStyleBackColor = False
@@ -165,17 +160,17 @@ Partial Class uct_dados_empresa
         Me.btn_adicionar_usuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_adicionar_usuario.Font = New System.Drawing.Font("Tw Cen MT", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_adicionar_usuario.ForeColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(164, Byte), Integer), CType(CType(100, Byte), Integer))
-        Me.btn_adicionar_usuario.Location = New System.Drawing.Point(346, 496)
-        Me.btn_adicionar_usuario.Margin = New System.Windows.Forms.Padding(2)
+        Me.btn_adicionar_usuario.Location = New System.Drawing.Point(461, 610)
+        Me.btn_adicionar_usuario.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btn_adicionar_usuario.Name = "btn_adicionar_usuario"
-        Me.btn_adicionar_usuario.Size = New System.Drawing.Size(231, 50)
+        Me.btn_adicionar_usuario.Size = New System.Drawing.Size(308, 62)
         Me.btn_adicionar_usuario.TabIndex = 15
         Me.btn_adicionar_usuario.Text = "Adicionar usuário"
         Me.btn_adicionar_usuario.UseVisualStyleBackColor = False
         '
         'uct_dados_empresa
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(234, Byte), Integer), CType(CType(234, Byte), Integer))
         Me.Controls.Add(Me.btn_adicionar_usuario)
@@ -189,9 +184,9 @@ Partial Class uct_dados_empresa
         Me.Controls.Add(Me.Atividade)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.txt_nome_empresa)
-        Me.Margin = New System.Windows.Forms.Padding(2)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "uct_dados_empresa"
-        Me.Size = New System.Drawing.Size(860, 624)
+        Me.Size = New System.Drawing.Size(1147, 768)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
