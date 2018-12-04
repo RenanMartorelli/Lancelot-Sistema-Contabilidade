@@ -198,7 +198,7 @@ Public Class uct_novo_lançamento
             End While
             my_sql_connection.Close()
         Catch ex As Exception
-            MsgBox("VOCÊ NAO SABE FAZER NADA QUE N TENHA ERRO?")
+            MsgBox("Erro ao processar.")
         End Try
     End Sub
 

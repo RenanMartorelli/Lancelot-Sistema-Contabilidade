@@ -47,12 +47,14 @@ Public Class uct_plano_contas
 
     Private Sub btn_verificar_saldo_Click(sender As Object, e As EventArgs) Handles btn_verificar_saldo.Click
         txt_qtde.Visible = False
+        Label5.Visible = False
         With dgv_plano_contas
             If .CurrentCell.Value = "Banco Santander" Or .CurrentCell.Value = "Bancos com movimento" Then
                 txt_valor_total.Text = chamar_saldo_banco()
             ElseIf .CurrentCell.Value = "Estoque" Then
                 txt_valor_total.Text = chamar_saldo_estoque_total()
             Else
+                Label5.Visible = True
                 txt_qtde.Visible = True
                 estoque = .CurrentCell.Value
                 txt_valor_total.Text = chama_saldo_estoque()
