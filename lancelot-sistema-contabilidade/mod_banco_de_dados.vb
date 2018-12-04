@@ -9,6 +9,7 @@ Module mod_banco_de_dados
     Public tipologin As String
     Public nome_conta As String
     Public estoque As String
+    Public total As Double
 
 
     Sub conexao_banco()
