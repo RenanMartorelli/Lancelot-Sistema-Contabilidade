@@ -119,4 +119,7 @@
         uct_relatorio.BringToFront()
     End Sub
 
+    Private Sub frm_menu_principal_Load(sender As Object, e As EventArgs) Handles Me.Load
+        Call pega_modo_estoque()
+    End Sub
 End Class

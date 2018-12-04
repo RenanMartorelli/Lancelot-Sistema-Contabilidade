@@ -1,28 +1,34 @@
 ﻿Imports MySql.Data.MySqlClient
 Module mod_banco_de_dados
 
-    Public my_sql_connection As New MySqlConnection
-    Public cmd As New MySqlCommand
+    Public my_sql_connection, my_sql_connection2 As New MySqlConnection
+    Public cmd, cmd2 As New MySqlCommand
     Public query, execute, comando As String
     Public da As New MySqlDataAdapter
-    Public leitura As MySqlDataReader 'pra ler
+    Public leitura, leitura2 As MySqlDataReader 'pra ler
     Public tipologin As String
     Public nome_conta As String
     Public estoque As String
     Public total As Double
+    Public modo_estoque As String
 
 
     Sub conexao_banco()
         my_sql_connection = New MySqlConnection
         my_sql_connection.ConnectionString = "server=bancodadoshousebar.mysql.database.azure.com; userid=vb_bar@bancodadoshousebar;password=Fabi5412;database=lancelot"
+        my_sql_connection2 = New MySqlConnection
+        my_sql_connection2.ConnectionString = "server=bancodadoshousebar.mysql.database.azure.com; userid=vb_bar@bancodadoshousebar;password=Fabi5412;database=lancelot"
         Try
             my_sql_connection.Open()
+            my_sql_connection2.Open()
             'MessageBox.Show("conexão ok!")
             my_sql_connection.Close()
+            my_sql_connection2.Close()
         Catch ex As Exception
             MessageBox.Show("Erro na conexão")
         Finally
             my_sql_connection.Dispose()
+            my_sql_connection2.Dispose()
         End Try
     End Sub
 
@@ -94,6 +100,25 @@ Module mod_banco_de_dados
         End Try
         Return somatotal
     End Function
+
+
+    Public Sub pega_modo_estoque()
+        Try
+            my_sql_connection.Open()
+            query = "Select MODO_ESTOQUE FROM lancelot.cadastro_empresa"
+            cmd = New MySqlCommand(query, my_sql_connection)
+            leitura = cmd.ExecuteReader
+            While leitura.Read
+                modo_estoque = leitura("MODO_ESTOQUE")
+            End While
+            my_sql_connection.Close()
+        Catch ex As Exception
+            MsgBox("Falha ao identificar o modo de estoque definido")
+        Finally
+            my_sql_connection.Dispose()
+        End Try
+    End Sub
+
 
     Public Function chama_qntd_estoque()
         Dim qntd As Integer

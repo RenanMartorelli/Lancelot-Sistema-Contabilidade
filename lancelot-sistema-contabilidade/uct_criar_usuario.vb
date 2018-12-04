@@ -23,7 +23,7 @@ Public Class uct_criar_usuario
 
         Try
             my_sql_connection.Open()
-            query = "select * from lancelot.login where USER_NAME= '" & txt_usuario.Text & "' and SENHA='" & txt_senha.Text & "'"
+            query = "select * from lancelot.login where USER_NAME= '" & txt_usuario.Text & "'"
             cmd = New MySqlCommand(query, my_sql_connection)
             leitura = cmd.ExecuteReader
             Dim cont As Integer
@@ -37,7 +37,7 @@ Public Class uct_criar_usuario
                 my_sql_connection.Close()
                 txt_usuario.Text = ""
                 txt_senha.Text = ""
-                txt_confirma_senha = ""
+                txt_confirma_senha.Text = ""
                 Exit Sub
             ElseIf cont = 0 Then
                 my_sql_connection.Close()
