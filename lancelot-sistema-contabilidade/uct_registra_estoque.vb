@@ -32,7 +32,7 @@ Public Class uct_registra_estoque
             my_sql_connection.Close()
             MsgBox("Estoque registrado com sucesso", MsgBoxStyle.Information, "Lancelot - Registro de Estoque")
         Catch ex As Exception
-            MsgBox("Mais erros...VOCÊ PARECE BURRO MEO")
+            MsgBox("Falha ao registrar novo estoque.")
         Finally
             my_sql_connection.Dispose()
         End Try

@@ -22,19 +22,22 @@ Partial Class uct_plano_contas
     'Não o modifique usando o editor de códigos.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.txt_valor_total = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.txt_qtde = New System.Windows.Forms.TextBox()
         Me.dgv_plano_contas = New System.Windows.Forms.DataGridView()
-        Me.codigo = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.nome_conta = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.id_estoque = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.btn_verificar_saldo = New System.Windows.Forms.Button()
         Me.btn_adicionar_novo_estoque = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.codigo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.nome_conta = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.id_estoque = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.dgv_plano_contas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -46,7 +49,7 @@ Partial Class uct_plano_contas
         Me.Label6.ForeColor = System.Drawing.Color.White
         Me.Label6.Location = New System.Drawing.Point(105, 70)
         Me.Label6.Name = "Label6"
-        Me.Label6.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Label6.Padding = New System.Windows.Forms.Padding(4)
         Me.Label6.Size = New System.Drawing.Size(255, 47)
         Me.Label6.TabIndex = 10
         Me.Label6.Text = "Plano de  contas"
@@ -97,34 +100,34 @@ Partial Class uct_plano_contas
         '
         'dgv_plano_contas
         '
+        Me.dgv_plano_contas.AllowUserToAddRows = False
+        Me.dgv_plano_contas.AllowUserToDeleteRows = False
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ScrollBar
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Tw Cen MT", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(164, Byte), Integer), CType(CType(100, Byte), Integer))
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.AppWorkspace
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgv_plano_contas.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.dgv_plano_contas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgv_plano_contas.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.codigo, Me.nome_conta, Me.id_estoque})
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(164, Byte), Integer), CType(CType(100, Byte), Integer))
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgv_plano_contas.DefaultCellStyle = DataGridViewCellStyle3
         Me.dgv_plano_contas.Location = New System.Drawing.Point(101, 146)
         Me.dgv_plano_contas.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.dgv_plano_contas.Name = "dgv_plano_contas"
         Me.dgv_plano_contas.ReadOnly = True
+        Me.dgv_plano_contas.RowHeadersVisible = False
         Me.dgv_plano_contas.RowTemplate.Height = 24
         Me.dgv_plano_contas.Size = New System.Drawing.Size(939, 361)
         Me.dgv_plano_contas.TabIndex = 25
-        '
-        'codigo
-        '
-        Me.codigo.HeaderText = "Código"
-        Me.codigo.Name = "codigo"
-        Me.codigo.ReadOnly = True
-        '
-        'nome_conta
-        '
-        Me.nome_conta.HeaderText = "Nome da conta"
-        Me.nome_conta.Name = "nome_conta"
-        Me.nome_conta.ReadOnly = True
-        Me.nome_conta.Width = 500
-        '
-        'id_estoque
-        '
-        Me.id_estoque.HeaderText = "id_estoque"
-        Me.id_estoque.Name = "id_estoque"
-        Me.id_estoque.ReadOnly = True
         '
         'btn_verificar_saldo
         '
@@ -176,10 +179,32 @@ Partial Class uct_plano_contas
         Me.Label1.Font = New System.Drawing.Font("Tw Cen MT", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(104, 519)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(656, 20)
+        Me.Label1.Size = New System.Drawing.Size(741, 20)
         Me.Label1.TabIndex = 30
-        Me.Label1.Text = "Selecionar linha desejada e clicar em ""Verficar"" para consultar seu saldo e outra" &
-    "s informações."
+        Me.Label1.Text = "Selecione a célula da conta desejada e clique em ""Verficar"" para consultar seu sa" &
+    "ldo e outras informações."
+        '
+        'codigo
+        '
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.AppWorkspace
+        Me.codigo.DefaultCellStyle = DataGridViewCellStyle2
+        Me.codigo.HeaderText = "Código"
+        Me.codigo.Name = "codigo"
+        Me.codigo.ReadOnly = True
+        '
+        'nome_conta
+        '
+        Me.nome_conta.HeaderText = "Nome da conta"
+        Me.nome_conta.Name = "nome_conta"
+        Me.nome_conta.ReadOnly = True
+        Me.nome_conta.Width = 500
+        '
+        'id_estoque
+        '
+        Me.id_estoque.HeaderText = "id_estoque"
+        Me.id_estoque.Name = "id_estoque"
+        Me.id_estoque.ReadOnly = True
+        Me.id_estoque.Visible = False
         '
         'uct_plano_contas
         '
@@ -210,11 +235,11 @@ Partial Class uct_plano_contas
     Friend WithEvents Label5 As Label
     Friend WithEvents txt_qtde As TextBox
     Friend WithEvents dgv_plano_contas As DataGridView
-    Friend WithEvents codigo As DataGridViewTextBoxColumn
-    Friend WithEvents nome_conta As DataGridViewTextBoxColumn
-    Friend WithEvents id_estoque As DataGridViewTextBoxColumn
     Friend WithEvents btn_verificar_saldo As Button
     Friend WithEvents btn_adicionar_novo_estoque As Button
     Friend WithEvents Button1 As Button
     Friend WithEvents Label1 As Label
+    Friend WithEvents codigo As DataGridViewTextBoxColumn
+    Friend WithEvents nome_conta As DataGridViewTextBoxColumn
+    Friend WithEvents id_estoque As DataGridViewTextBoxColumn
 End Class

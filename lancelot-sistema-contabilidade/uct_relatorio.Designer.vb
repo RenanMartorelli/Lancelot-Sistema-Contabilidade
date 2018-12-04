@@ -24,14 +24,14 @@ Partial Class uct_relatorio
     Private Sub InitializeComponent()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.dgv_relatório = New System.Windows.Forms.DataGridView()
-        Me.rdb_venda_bruta = New System.Windows.Forms.RadioButton()
-        Me.rdb_vendas_lucro = New System.Windows.Forms.RadioButton()
-        Me.cmb_produtos = New System.Windows.Forms.ComboBox()
         Me.data_lancamento = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.nome_produto = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.quantidade_vendida = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.valor_venda = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.valor_total = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.rdb_venda_bruta = New System.Windows.Forms.RadioButton()
+        Me.rdb_vendas_lucro = New System.Windows.Forms.RadioButton()
+        Me.cmb_produtos = New System.Windows.Forms.ComboBox()
         CType(Me.dgv_relatório, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -50,6 +50,7 @@ Partial Class uct_relatorio
         '
         'dgv_relatório
         '
+        Me.dgv_relatório.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgv_relatório.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgv_relatório.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.data_lancamento, Me.nome_produto, Me.quantidade_vendida, Me.valor_venda, Me.valor_total})
         Me.dgv_relatório.Location = New System.Drawing.Point(95, 222)
@@ -57,6 +58,34 @@ Partial Class uct_relatorio
         Me.dgv_relatório.RowTemplate.Height = 24
         Me.dgv_relatório.Size = New System.Drawing.Size(928, 415)
         Me.dgv_relatório.TabIndex = 25
+        '
+        'data_lancamento
+        '
+        Me.data_lancamento.HeaderText = "Data"
+        Me.data_lancamento.Name = "data_lancamento"
+        '
+        'nome_produto
+        '
+        Me.nome_produto.HeaderText = "Nome do produto"
+        Me.nome_produto.Name = "nome_produto"
+        Me.nome_produto.Width = 300
+        '
+        'quantidade_vendida
+        '
+        Me.quantidade_vendida.HeaderText = "Quant. Vendida"
+        Me.quantidade_vendida.Name = "quantidade_vendida"
+        Me.quantidade_vendida.Width = 75
+        '
+        'valor_venda
+        '
+        Me.valor_venda.HeaderText = "Valor venda"
+        Me.valor_venda.Name = "valor_venda"
+        Me.valor_venda.Width = 75
+        '
+        'valor_total
+        '
+        Me.valor_total.HeaderText = "Valor total"
+        Me.valor_total.Name = "valor_total"
         '
         'rdb_venda_bruta
         '
@@ -92,34 +121,6 @@ Partial Class uct_relatorio
         Me.cmb_produtos.Name = "cmb_produtos"
         Me.cmb_produtos.Size = New System.Drawing.Size(438, 35)
         Me.cmb_produtos.TabIndex = 28
-        '
-        'data_lancamento
-        '
-        Me.data_lancamento.HeaderText = "Data"
-        Me.data_lancamento.Name = "data_lancamento"
-        '
-        'nome_produto
-        '
-        Me.nome_produto.HeaderText = "Nome do produto"
-        Me.nome_produto.Name = "nome_produto"
-        Me.nome_produto.Width = 300
-        '
-        'quantidade_vendida
-        '
-        Me.quantidade_vendida.HeaderText = "Quant. Vendida"
-        Me.quantidade_vendida.Name = "quantidade_vendida"
-        Me.quantidade_vendida.Width = 75
-        '
-        'valor_venda
-        '
-        Me.valor_venda.HeaderText = "Valor venda"
-        Me.valor_venda.Name = "valor_venda"
-        Me.valor_venda.Width = 75
-        '
-        'valor_total
-        '
-        Me.valor_total.HeaderText = "Valor total"
-        Me.valor_total.Name = "valor_total"
         '
         'uct_relatorio
         '

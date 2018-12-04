@@ -33,7 +33,9 @@ Public Class uct_plano_contas
             End While
             my_sql_connection.Close()
         Catch ex As Exception
-            MsgBox("VOCÊ NAO SABE FAZER NADA QUE N TENHA ERRO???")
+            MsgBox("Falha ao preencher o plano de contas.", MsgBoxStyle.OkOnly)
+        Finally
+            my_sql_connection.Dispose()
         End Try
 
         'query pegando os tipos de estoque que tem e adicionando eles também

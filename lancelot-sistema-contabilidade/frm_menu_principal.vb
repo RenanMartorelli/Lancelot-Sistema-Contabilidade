@@ -4,7 +4,7 @@
     End Sub
 
     Private Sub frm_menu_principal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'salve fatec. teste gitanderson 
+        Call pega_modo_estoque()
     End Sub
 
     Private Sub btn_dados_empresa_Click(sender As Object, e As EventArgs) Handles btn_dados_empresa.Click
@@ -119,7 +119,4 @@
         uct_relatorio.BringToFront()
     End Sub
 
-    Private Sub Panel5_Paint(sender As Object, e As PaintEventArgs)
-
-    End Sub
 End Class
