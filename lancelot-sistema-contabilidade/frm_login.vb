@@ -16,6 +16,11 @@ Public Class frm_login
         Dim frm_menu_principal As frm_menu_principal
         frm_menu_principal = New frm_menu_principal()
 
+        If txt_nome.Text = "" Or txt_senha.Text = "" Then
+            MsgBox("Usuário ou senha incorretos!", MsgBoxStyle.OkOnly, "Lancelot Contabilidade - Login")
+            Exit Sub
+        End If
+
         If txt_nome.Text = "admin" And txt_nome.Text = "admin" Then
             frm_menu_principal.Show()
             Exit Sub
@@ -24,7 +29,7 @@ Public Class frm_login
         Try
             'ui bebe eu gosto mais de vc do que de mim
             my_sql_connection.Open()
-            query = "select * from lancelot.login where USER_NAME= '" & txt_nome.Text & "' and SENHA= '" & txt_senha.Text & "' "
+            query = "select * from lancelot.login where USER_NAME= '" & txt_nome.Text & "' and SENHA= '" & txt_senha.Text & "'"
             cmd = New MySqlCommand(query, my_sql_connection)
             leitura = cmd.ExecuteReader
             Dim cont As Integer
@@ -35,13 +40,13 @@ Public Class frm_login
             End While
 
             If cont = 1 Then
-                MsgBox("Usuário encontrado")
+                MsgBox("Usuário logado com sucesso!", MsgBoxStyle.OkOnly, "Lancelot Contabilidade - Login")
                 frm_menu_principal.Show()
                 my_sql_connection.Close()
 
 
             ElseIf cont = 0 Then
-                MsgBox("Usuário ou senha inválidos")
+                MsgBox("Usuário ou senha incorretos!", MsgBoxStyle.OkOnly, "Lancelot Contabilidade - Login")
                 my_sql_connection.Close()
             End If
 

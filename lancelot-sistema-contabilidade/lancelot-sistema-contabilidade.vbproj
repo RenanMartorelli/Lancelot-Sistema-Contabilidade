@@ -138,7 +138,7 @@
     <Compile Include="uct_relatorio.vb">
       <SubType>UserControl</SubType>
     </Compile>
-	    <Compile Include="uct_registra_estoque.Designer.vb">
+    <Compile Include="uct_registra_estoque.Designer.vb">
       <DependentUpon>uct_registra_estoque.vb</DependentUpon>
     </Compile>
     <Compile Include="uct_registra_estoque.vb">
@@ -176,7 +176,7 @@
     <EmbeddedResource Include="uct_relatorio.resx">
       <DependentUpon>uct_relatorio.vb</DependentUpon>
     </EmbeddedResource>
-	   <EmbeddedResource Include="uct_registra_estoque.resx">
+    <EmbeddedResource Include="uct_registra_estoque.resx">
       <DependentUpon>uct_registra_estoque.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>

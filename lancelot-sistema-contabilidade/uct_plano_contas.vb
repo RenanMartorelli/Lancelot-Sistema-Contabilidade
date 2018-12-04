@@ -6,8 +6,6 @@ Public Class uct_plano_contas
         dgv_plano_contas.Rows.Add("1.1", "Ativo circulante")
         dgv_plano_contas.Rows.Add("1.1.1", "Bancos com movimento")
         dgv_plano_contas.Rows.Add("1.1.1.1", "Banco Santander")
-        dgv_plano_contas.Rows.Add("1", "Ativo")
-        dgv_plano_contas.Rows.Add("1.1", "Ativo circulante")
         dgv_plano_contas.Rows.Add("1.1.2", "Estoque")
 
         txt_qtde.Visible = False
@@ -40,28 +38,19 @@ Public Class uct_plano_contas
     End Sub
 
     Private Sub btn_verificar_saldo_Click(sender As Object, e As EventArgs) Handles btn_verificar_saldo.Click
-        Try
-            Dim somatotal As Double
-            Dim qntd As Integer
-            If dgv_plano_contas.CurrentCell.Value = "Banco Santander" Then
-                my_sql_connection.Open()
-                query = "select * from lancelot.lancamento_banco"
-                cmd = New MySqlCommand(query, my_sql_connection)
-                leitura = cmd.ExecuteReader
-                While leitura.Read
-                    If leitura("TIPO") = "Débito" Then
-                        somatotal += leitura("VALOR")
-                    End If
-                    If leitura("TIPO") = "Crédito" Then
-                        somatotal -= leitura("VALOR")
-                    End If
-                End While
+        txt_qtde.Visible = False
+        With dgv_plano_contas
+            If .CurrentCell.Value = "Banco Santander" Or .CurrentCell.Value = "Bancos com movimento" Then
+                txt_valor_total.Text = chamar_saldo_banco()
+            ElseIf .CurrentCell.Value = "Estoque" Then
+                txt_valor_total.Text = chamar_saldo_estoque_total()
+            Else
+                txt_qtde.Visible = True
+                estoque = .CurrentCell.Value
+                txt_valor_total.Text = chama_saldo_estoque()
+                txt_qtde.Text = chama_qntd_estoque()
             End If
-            txt_valor_total.Text = somatotal
-            my_sql_connection.Close()
-        Catch ex As Exception
-
-        End Try
+        End With
     End Sub
 
     Private Sub btn__Click(sender As Object, e As EventArgs) Handles btn_.Click

@@ -22,6 +22,7 @@ Partial Class frm_menu_principal
     'Não o modifique usando o editor de códigos.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frm_menu_principal))
         Me.btn_dados_empresa = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Button3 = New System.Windows.Forms.Button()
@@ -208,9 +209,10 @@ Partial Class frm_menu_principal
         Me.Controls.Add(Me.Panel5)
         Me.Controls.Add(Me.pan_menu_principal)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "frm_menu_principal"
-        Me.Text = "Form1"
+        Me.Text = "Lancelot Contabilidade"
         Me.Panel1.ResumeLayout(False)
         Me.pan_menu_principal.ResumeLayout(False)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()

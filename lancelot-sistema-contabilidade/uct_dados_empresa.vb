@@ -30,6 +30,9 @@ Public Class uct_dados_empresa
     End Sub
     Dim frm_menu_principal As frm_menu_principal
     Private Sub btn_adicionar_usuario_Click(sender As Object, e As EventArgs) Handles btn_adicionar_usuario.Click
+
+        End If
+
         frm_menu_principal = Me.ParentForm
         frm_menu_principal.chama_novo_usuario()
     End Sub
@@ -41,8 +44,11 @@ Public Class uct_dados_empresa
             cmd = New MySqlCommand(query, my_sql_connection)
             leitura = cmd.ExecuteReader
             MsgBox("Dados atualizados com sucesso!")
+            my_sql_connection.Close()
         Catch ex As Exception
             MsgBox("DEU RUIM CRÃ")
+        Finally
+            my_sql_connection.Dispose()
         End Try
 
     End Sub
