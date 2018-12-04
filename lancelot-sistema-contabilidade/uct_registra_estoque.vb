@@ -24,9 +24,35 @@ Public Class uct_registra_estoque
             MsgBox("Digite o nome do estoque a ser registrado", MsgBoxStyle.OkOnly, "Lancelot Contabilidade - Registrar novo estoque")
             Exit Sub
         End If
+
         Try
             my_sql_connection.Open()
-            query = "insert into lancelot.cadastro_estoque(NOME_PRODUTO) VALUES ('" & txt_nome_estoque.Text & "')"
+            query = "select * from lancelot.cadastro_estoque where NOME_PRODUTO= '" & UCase(txt_nome_estoque.Text) & "'"
+            cmd = New MySqlCommand(query, my_sql_connection)
+            leitura = cmd.ExecuteReader
+            Dim cont As Integer
+            cont = 0
+            While leitura.Read
+                cont = cont + 1
+            End While
+
+            If cont = 1 Then
+                MsgBox("Este produto já existe!", MsgBoxStyle.OkOnly, "Lancelot Contabilidade - Registrar novo estoque")
+                my_sql_connection.Close()
+                Exit Sub
+            ElseIf cont = 0 Then
+                my_sql_connection.Close()
+                Exit Try
+            End If
+        Catch ex As Exception
+            MsgBox("Erro no processamento de validação de cadastro de estoque!")
+        Finally
+            my_sql_connection.Dispose()
+        End Try
+
+        Try
+            my_sql_connection.Open()
+            query = "insert into lancelot.cadastro_estoque(NOME_PRODUTO) VALUES ('" & UCase(txt_nome_estoque.Text) & "')"
             cmd = New MySqlCommand(query, my_sql_connection)
             leitura = cmd.ExecuteReader
             my_sql_connection.Close()
@@ -36,6 +62,7 @@ Public Class uct_registra_estoque
         Finally
             my_sql_connection.Dispose()
         End Try
+
         Dim frm_menu_principal As frm_menu_principal
         frm_menu_principal = Me.ParentForm
         frm_menu_principal.Finaliza_user_control(Me)

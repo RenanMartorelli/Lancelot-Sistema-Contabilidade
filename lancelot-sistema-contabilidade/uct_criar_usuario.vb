@@ -23,6 +23,34 @@ Public Class uct_criar_usuario
 
         Try
             my_sql_connection.Open()
+            query = "select * from lancelot.login where USER_NAME= '" & txt_usuario.Text & "' and SENHA='" & txt_senha.Text & "'"
+            cmd = New MySqlCommand(query, my_sql_connection)
+            leitura = cmd.ExecuteReader
+            Dim cont As Integer
+            cont = 0
+            While leitura.Read
+                cont = cont + 1
+            End While
+
+            If cont = 1 Then
+                MsgBox("Usuário já cadastrado!", MsgBoxStyle.OkOnly, "Lancelot Contabilidade - Criar usuário")
+                my_sql_connection.Close()
+                txt_usuario.Text = ""
+                txt_senha.Text = ""
+                txt_confirma_senha = ""
+                Exit Sub
+            ElseIf cont = 0 Then
+                my_sql_connection.Close()
+                Exit Try
+            End If
+        Catch ex As Exception
+            MsgBox("Erro no processamento de validação de cadastro de estoque!")
+        Finally
+            my_sql_connection.Dispose()
+        End Try
+
+        Try
+            my_sql_connection.Open()
             query = "insert into lancelot.login(NAME, LAST_NAME, USER_NAME, SENHA, TIPO) VALUES ('" & txt_nome.Text & "','" & txt_sobrenome.Text & "','" & txt_usuario.Text & "','" & txt_senha.Text & "','" & grau_acesso & "')"
             cmd = New MySqlCommand(query, my_sql_connection) 'insere o comando na linha de comando do mysql
             leitura = cmd.ExecuteReader 'executa o comando lendo o banco
