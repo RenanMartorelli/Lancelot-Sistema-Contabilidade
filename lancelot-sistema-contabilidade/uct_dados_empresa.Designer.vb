@@ -33,6 +33,12 @@ Partial Class uct_dados_empresa
         Me.Label6 = New System.Windows.Forms.Label()
         Me.btn_editar_dados = New System.Windows.Forms.Button()
         Me.btn_adicionar_usuario = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.rdb_PEPS = New System.Windows.Forms.RadioButton()
+        Me.rdb_UEPS = New System.Windows.Forms.RadioButton()
+        Me.rdb_media = New System.Windows.Forms.RadioButton()
+        Me.lbl_modo_estoque = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'txt_nome_empresa
@@ -168,11 +174,91 @@ Partial Class uct_dados_empresa
         Me.btn_adicionar_usuario.Text = "Adicionar usuário"
         Me.btn_adicionar_usuario.UseVisualStyleBackColor = False
         '
+        'Button2
+        '
+        Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer))
+        Me.Button2.FlatAppearance.BorderSize = 0
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button2.Location = New System.Drawing.Point(767, 190)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(3, 342)
+        Me.Button2.TabIndex = 30
+        Me.Button2.Text = "Button2"
+        Me.Button2.UseVisualStyleBackColor = False
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Tw Cen MT", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(775, 190)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(204, 28)
+        Me.Label2.TabIndex = 31
+        Me.Label2.Text = "Método de estoque"
+        '
+        'rdb_PEPS
+        '
+        Me.rdb_PEPS.AutoSize = True
+        Me.rdb_PEPS.Font = New System.Drawing.Font("Tw Cen MT", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rdb_PEPS.Location = New System.Drawing.Point(780, 319)
+        Me.rdb_PEPS.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.rdb_PEPS.Name = "rdb_PEPS"
+        Me.rdb_PEPS.Size = New System.Drawing.Size(80, 32)
+        Me.rdb_PEPS.TabIndex = 32
+        Me.rdb_PEPS.TabStop = True
+        Me.rdb_PEPS.Text = "PEPS"
+        Me.rdb_PEPS.UseVisualStyleBackColor = True
+        '
+        'rdb_UEPS
+        '
+        Me.rdb_UEPS.AutoSize = True
+        Me.rdb_UEPS.Font = New System.Drawing.Font("Tw Cen MT", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rdb_UEPS.Location = New System.Drawing.Point(780, 381)
+        Me.rdb_UEPS.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.rdb_UEPS.Name = "rdb_UEPS"
+        Me.rdb_UEPS.Size = New System.Drawing.Size(83, 32)
+        Me.rdb_UEPS.TabIndex = 33
+        Me.rdb_UEPS.TabStop = True
+        Me.rdb_UEPS.Text = "UEPS"
+        Me.rdb_UEPS.UseVisualStyleBackColor = True
+        '
+        'rdb_media
+        '
+        Me.rdb_media.AutoSize = True
+        Me.rdb_media.Font = New System.Drawing.Font("Tw Cen MT", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rdb_media.Location = New System.Drawing.Point(780, 442)
+        Me.rdb_media.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.rdb_media.Name = "rdb_media"
+        Me.rdb_media.Size = New System.Drawing.Size(95, 32)
+        Me.rdb_media.TabIndex = 34
+        Me.rdb_media.TabStop = True
+        Me.rdb_media.Text = "Média"
+        Me.rdb_media.UseVisualStyleBackColor = True
+        '
+        'lbl_modo_estoque
+        '
+        Me.lbl_modo_estoque.AutoSize = True
+        Me.lbl_modo_estoque.BackColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer))
+        Me.lbl_modo_estoque.Font = New System.Drawing.Font("Tw Cen MT", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_modo_estoque.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.lbl_modo_estoque.Location = New System.Drawing.Point(776, 224)
+        Me.lbl_modo_estoque.Name = "lbl_modo_estoque"
+        Me.lbl_modo_estoque.Size = New System.Drawing.Size(24, 33)
+        Me.lbl_modo_estoque.TabIndex = 35
+        Me.lbl_modo_estoque.Text = "-"
+        '
         'uct_dados_empresa
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(234, Byte), Integer), CType(CType(234, Byte), Integer))
+        Me.Controls.Add(Me.lbl_modo_estoque)
+        Me.Controls.Add(Me.rdb_media)
+        Me.Controls.Add(Me.rdb_UEPS)
+        Me.Controls.Add(Me.rdb_PEPS)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.btn_adicionar_usuario)
         Me.Controls.Add(Me.btn_editar_dados)
         Me.Controls.Add(Me.Label6)
@@ -203,4 +289,10 @@ Partial Class uct_dados_empresa
     Friend WithEvents Label6 As Label
     Friend WithEvents btn_editar_dados As Button
     Friend WithEvents btn_adicionar_usuario As Button
+    Friend WithEvents Button2 As Button
+    Friend WithEvents Label2 As Label
+    Friend WithEvents rdb_PEPS As RadioButton
+    Friend WithEvents rdb_UEPS As RadioButton
+    Friend WithEvents rdb_media As RadioButton
+    Friend WithEvents lbl_modo_estoque As Label
 End Class

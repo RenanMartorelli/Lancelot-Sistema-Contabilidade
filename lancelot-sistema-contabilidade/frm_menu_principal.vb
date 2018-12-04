@@ -4,7 +4,7 @@
     End Sub
 
     Private Sub frm_menu_principal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'salve fatec. teste gitanderson 
+        Call pega_modo_estoque()
     End Sub
 
     Private Sub btn_dados_empresa_Click(sender As Object, e As EventArgs) Handles btn_dados_empresa.Click
@@ -118,4 +118,5 @@
         pan_menu_principal.Controls.Add(uct_relatorio)
         uct_relatorio.BringToFront()
     End Sub
+
 End Class

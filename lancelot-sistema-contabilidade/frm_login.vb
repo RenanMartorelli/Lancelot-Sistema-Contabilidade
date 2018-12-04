@@ -23,7 +23,9 @@ Public Class frm_login
 
         If txt_nome.Text = "admin" And txt_nome.Text = "admin" Then
             frm_menu_principal.Show()
+            Me.Visible = False
             Exit Sub
+
         End If
 
         Try
@@ -54,6 +56,7 @@ Public Class frm_login
             MsgBox("Erro ao pegar do banco")
         Finally
             my_sql_connection.Dispose()
+            Me.Visible = False
         End Try
     End Sub
 

@@ -29,16 +29,14 @@ Partial Class frm_menu_principal
         Me.btn_plano_contas = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
-        Me.Panel5 = New System.Windows.Forms.Panel()
         Me.Panel7 = New System.Windows.Forms.Panel()
-        Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.pan_menu_principal = New System.Windows.Forms.Panel()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.pan_menu_principal = New System.Windows.Forms.Panel()
         Me.Panel1.SuspendLayout()
-        Me.pan_menu_principal.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.pan_menu_principal.SuspendLayout()
         Me.SuspendLayout()
         '
         'btn_dados_empresa
@@ -65,7 +63,7 @@ Partial Class frm_menu_principal
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(233, 792)
+        Me.Panel1.Size = New System.Drawing.Size(233, 768)
         Me.Panel1.TabIndex = 6
         '
         'Button3
@@ -131,15 +129,6 @@ Partial Class frm_menu_principal
         Me.Button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Button2.UseVisualStyleBackColor = False
         '
-        'Panel5
-        '
-        Me.Panel5.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer))
-        Me.Panel5.Location = New System.Drawing.Point(1307, 0)
-        Me.Panel5.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(13, 768)
-        Me.Panel5.TabIndex = 11
-        '
         'Panel7
         '
         Me.Panel7.BackColor = System.Drawing.Color.Gainsboro
@@ -148,38 +137,6 @@ Partial Class frm_menu_principal
         Me.Panel7.Name = "Panel7"
         Me.Panel7.Size = New System.Drawing.Size(243, 162)
         Me.Panel7.TabIndex = 13
-        '
-        'Panel2
-        '
-        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer))
-        Me.Panel2.Location = New System.Drawing.Point(1332, 0)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(13, 768)
-        Me.Panel2.TabIndex = 12
-        '
-        'pan_menu_principal
-        '
-        Me.pan_menu_principal.BackColor = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(234, Byte), Integer), CType(CType(234, Byte), Integer))
-        Me.pan_menu_principal.Controls.Add(Me.PictureBox1)
-        Me.pan_menu_principal.Dock = System.Windows.Forms.DockStyle.Right
-        Me.pan_menu_principal.Location = New System.Drawing.Point(232, 0)
-        Me.pan_menu_principal.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.pan_menu_principal.Name = "pan_menu_principal"
-        Me.pan_menu_principal.Size = New System.Drawing.Size(1052, 792)
-        Me.pan_menu_principal.TabIndex = 15
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(234, Byte), Integer), CType(CType(234, Byte), Integer))
-        Me.PictureBox1.Image = Global.lancelot_sistema_contabilidade.My.Resources.Resources.Lancelot_logo
-        Me.PictureBox1.Location = New System.Drawing.Point(310, 201)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(462, 399)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 16
-        Me.PictureBox1.TabStop = False
         '
         'PictureBox2
         '
@@ -193,12 +150,34 @@ Partial Class frm_menu_principal
         Me.PictureBox2.TabIndex = 14
         Me.PictureBox2.TabStop = False
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(234, Byte), Integer), CType(CType(234, Byte), Integer))
+        Me.PictureBox1.Image = Global.lancelot_sistema_contabilidade.My.Resources.Resources.Lancelot_logo
+        Me.PictureBox1.Location = New System.Drawing.Point(366, 191)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(462, 399)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 16
+        Me.PictureBox1.TabStop = False
+        '
+        'pan_menu_principal
+        '
+        Me.pan_menu_principal.BackColor = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(234, Byte), Integer), CType(CType(234, Byte), Integer))
+        Me.pan_menu_principal.Controls.Add(Me.PictureBox1)
+        Me.pan_menu_principal.Dock = System.Windows.Forms.DockStyle.Right
+        Me.pan_menu_principal.Location = New System.Drawing.Point(247, 0)
+        Me.pan_menu_principal.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.pan_menu_principal.Name = "pan_menu_principal"
+        Me.pan_menu_principal.Size = New System.Drawing.Size(1136, 768)
+        Me.pan_menu_principal.TabIndex = 15
+        '
         'frm_menu_principal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1284, 792)
-        Me.Controls.Add(Me.Panel2)
+        Me.ClientSize = New System.Drawing.Size(1383, 768)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.Panel7)
         Me.Controls.Add(Me.Button2)
@@ -206,7 +185,6 @@ Partial Class frm_menu_principal
         Me.Controls.Add(Me.btn_plano_contas)
         Me.Controls.Add(Me.btn_dados_empresa)
         Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.Panel5)
         Me.Controls.Add(Me.pan_menu_principal)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -214,9 +192,9 @@ Partial Class frm_menu_principal
         Me.Name = "frm_menu_principal"
         Me.Text = "Lancelot Contabilidade"
         Me.Panel1.ResumeLayout(False)
-        Me.pan_menu_principal.ResumeLayout(False)
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.pan_menu_principal.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -226,10 +204,8 @@ Partial Class frm_menu_principal
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
     Friend WithEvents Button3 As Button
-    Friend WithEvents Panel5 As Panel
     Friend WithEvents Panel7 As Panel
     Friend WithEvents PictureBox2 As PictureBox
-    Friend WithEvents Panel2 As Panel
-    Friend WithEvents pan_menu_principal As Panel
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents pan_menu_principal As Panel
 End Class

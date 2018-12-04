@@ -11,6 +11,10 @@ Public Class uct_criar_usuario
                 MsgBox("Preencha todos os campos!", MsgBoxStyle.OkOnly, "Lancelot Contabilidade - Criar Usuário")
                 Exit Sub
             End If
+            If txt_confirma_senha.Text <> txt_senha.Text Then
+                MsgBox("Os campos senha e confirmar senha não conferem!", MsgBoxStyle.OkOnly, "Lancelot Contabilidade - Criar Usuário")
+                Exit Sub
+            End If
             If rdb_administrador.Checked = False And rdb_operador.Checked = False Then
                 MsgBox("Selecione o grau de acesso do novo usuário!", MsgBoxStyle.OkOnly, "Lancelot Contabilidade - Criar Usuário")
                 Exit Sub

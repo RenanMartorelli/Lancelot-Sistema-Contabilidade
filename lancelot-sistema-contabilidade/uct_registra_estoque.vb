@@ -13,7 +13,9 @@ Public Class uct_registra_estoque
             End While
             my_sql_connection.Close()
         Catch ex As Exception
-            MsgBox("DEU RUIM DOIDOS")
+            lbl_id.Text = "1"
+        Finally
+            my_sql_connection.Dispose()
         End Try
     End Sub
 
@@ -30,7 +32,9 @@ Public Class uct_registra_estoque
             my_sql_connection.Close()
             MsgBox("Estoque registrado com sucesso", MsgBoxStyle.Information, "Lancelot - Registro de Estoque")
         Catch ex As Exception
-            MsgBox("Mais erros...VOCÊ PARECE BURRO MEO")
+            MsgBox("Falha ao registrar novo estoque.")
+        Finally
+            my_sql_connection.Dispose()
         End Try
         Dim frm_menu_principal As frm_menu_principal
         frm_menu_principal = Me.ParentForm
