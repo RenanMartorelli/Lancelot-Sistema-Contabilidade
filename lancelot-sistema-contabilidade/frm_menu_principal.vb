@@ -3,9 +3,9 @@
         Application.Exit()
     End Sub
 
-    Private Sub frm_menu_principal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Call pega_modo_estoque()
-    End Sub
+    'Private Sub frm_menu_principal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    'Call pega_modo_estoque()
+    'End Sub
 
     Private Sub btn_dados_empresa_Click(sender As Object, e As EventArgs) Handles btn_dados_empresa.Click
         Dim uct_dados_empresa = New uct_dados_empresa

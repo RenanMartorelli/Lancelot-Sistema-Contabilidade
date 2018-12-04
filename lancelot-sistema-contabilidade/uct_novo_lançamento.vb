@@ -105,16 +105,19 @@ Public Class uct_novo_lançamento
 
                     'Call retira_e_atualiza_estoque(id_lancamento, quant_restante_estoque, valor_uni)
                     'my_sql_connection.Open()
+                    leitura.Close()
                     query = "update lancelot.lancamento_estoque set QTD=" & quant_restante_estoque & ",VALOR_TOTAL=" & (valor_uni * quant_restante_estoque) & " WHERE IDESTOQUE=" & id_lancamento & ""
                     cmd = New MySqlCommand(query, my_sql_connection)
-                    'leitura = cmd.ExecuteReader
+                    leitura = cmd.ExecuteReader
                     'my_sql_connection.Close()
                     'FIM DA CALL E ATUALIZA
 
                     'my_sql_connection.Open()
+                    leitura.Close()
                     query = "insert into lancelot.lancamento_credito_estoque(DATA_CRIAÇÃO, NOME_PRODUTO, QTD, VALOR_UNI, CUSTO_TOTAL_PROD, VALOR_TOTAL, LUCRO) VALUES ('" & CDate(txt_data.Text) & "','" & cmb_comp_credito.SelectedItem.ToString & "' , " & CInt(txt_qtde.Text) & " , " & CDbl(txt_valor_unitario.Text) & ", " & valor_custo_total & " ," & CDbl(txt_valor_total.Text) & ", " & CDbl(txt_valor_total.Text) - valor_custo_total & ")"
                     cmd = New MySqlCommand(query, my_sql_connection)
-                    'leitura = cmd.ExecuteReader
+                    leitura = cmd.ExecuteReader
+                    'leitura.Close()
                     'my_sql_connection.Close()
 
                 End While
