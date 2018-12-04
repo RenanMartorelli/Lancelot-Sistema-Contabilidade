@@ -28,8 +28,17 @@ Public Class uct_novo_lançamento
 
 
     Private Sub btn_confirmar_Click(sender As Object, e As EventArgs) Handles btn_confirmar.Click
-        If cmb_conta_credito.SelectedItem = "Banco" Then 'Validação -> não pode tirar mais do que tem no saldo
-            If CInt(txt_valor_total.Text) > Then
+        If cmb_conta_credito.SelectedItem = "Banco" Then 'Validação -> não pode tirar mais dinheiro do que o saldo do banco
+            If CInt(txt_valor_total.Text) > chamar_saldo_banco() Then
+                MsgBox("Não é possível realizar um crédito de um valor maior do que saldo do banco.")
+            End If
+        End If
+
+        If cmb_conta_credito.SelectedItem = "Estoque" Then 'Validação -> não pode tirar mais produtos do que tem no estoque
+            estoque = cmb_comp_credito.Text.ToString()
+            MsgBox(estoque)
+            If CInt(txt_qtde.Text) > chama_qntd_estoque() Then
+                MsgBox("Não é possível realizar um crédito de estoque com uma quantidade maior do que a disponível.")
             End If
         End If
 

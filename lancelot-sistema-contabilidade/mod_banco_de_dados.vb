@@ -41,7 +41,7 @@ Module mod_banco_de_dados
             End While
             my_sql_connection.Close()
         Catch ex As Exception
-            MsgBox("Nao funcionou T.T")
+            MsgBox("Nao funcionou chamar_saldo_banco")
         Finally
             my_sql_connection.Dispose()
         End Try
@@ -64,7 +64,7 @@ Module mod_banco_de_dados
             End While
             my_sql_connection.Close()
         Catch ex As Exception
-            MsgBox("Nao funcionou T.T")
+            MsgBox("Nao funcionou chamar_saldo_estoque_total")
         Finally
             my_sql_connection.Dispose()
         End Try
@@ -87,7 +87,7 @@ Module mod_banco_de_dados
             End While
             my_sql_connection.Close()
         Catch ex As Exception
-            MsgBox("Nao funcionou T.T")
+            MsgBox("Nao funcionou chama_saldo_estoque")
         Finally
             my_sql_connection.Dispose()
         End Try
@@ -96,6 +96,7 @@ Module mod_banco_de_dados
 
     Public Function chama_qntd_estoque()
         Dim qntd As Integer
+        qntd = 0
         Try
             my_sql_connection.Open()
             query = "select * from lancelot.lancamento_estoque where NOME_PRODUTO = '" & estoque & "'"
@@ -106,7 +107,7 @@ Module mod_banco_de_dados
             End While
             my_sql_connection.Close()
         Catch ex As Exception
-            MsgBox("Nao funcionou T.T")
+            MsgBox("Nao funcionou chama_qntd_estoque")
         Finally
             my_sql_connection.Dispose()
         End Try
