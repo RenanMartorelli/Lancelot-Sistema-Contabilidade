@@ -116,7 +116,29 @@ Public Class uct_novo_lançamento
                     query = "select * from lancelot.lancamento_estoque WHERE NOME_PRODUTO= '" & cmb_comp_credito.SelectedItem.ToString & "' AND QTD > 0 ORDER BY DATA_CRIAÇÃO ASC"
                 ElseIf modo_estoque = "UEPS" Then
                     query = "select * from lancelot.lancamento_estoque WHERE NOME_PRODUTO= '" & cmb_comp_credito.SelectedItem.ToString & "' AND QTD > 0 ORDER BY DATA_CRIAÇÃO DESC"
+                Else
+                    venda_media()
+                    txt_valor_total.Text = ""
+                    txt_valor_unitario.Text = ""
+                    txt_qtde.Text = ""
+                    cmb_conta_debito.Text = ""
+                    cmb_comp_debito.Text = ""
+                    cmb_conta_credito.Text = ""
+                    cmb_comp_credito.Text = ""
+                    With cmb_conta_credito
+                        .Items.Clear()
+                        .Items.Add("Banco")
+                        .Items.Add("Estoque")
+                    End With
+
+                    With cmb_conta_debito
+                        .Items.Clear()
+                        .Items.Add("Banco")
+                        .Items.Add("Estoque")
+                    End With
+                    Exit Sub
                 End If
+
                 cmd = New MySqlCommand(query, my_sql_connection)
                 leitura = cmd.ExecuteReader
 
@@ -352,5 +374,66 @@ Public Class uct_novo_lançamento
         If Not String.IsNullOrEmpty(txt_qtde.Text) And Not String.IsNullOrEmpty(txt_valor_unitario.Text) Then
             txt_valor_total.Text = (CInt(txt_qtde.Text) * CDbl(txt_valor_unitario.Text))
         End If
+    End Sub
+
+    'SUB PARA EXECUTAR VENDA COM MÉTODO DE ESTOQUE = MÉDIA
+    Private Sub venda_media()
+        Dim valor_custo_total As Double
+        Dim valor_media_estoque As Double
+        Dim qntd_total_estoque As Integer
+        query = "select * from lancelot.lancamento_estoque WHERE NOME_PRODUTO= '" & cmb_comp_credito.SelectedItem.ToString & "' AND QTD > 0"
+        cmd = New MySqlCommand(query, my_sql_connection)
+        leitura = cmd.ExecuteReader
+        While leitura.Read
+            valor_media_estoque += leitura("VALOR_TOTAL")
+            qntd_total_estoque += leitura("QTD")
+        End While
+        valor_media_estoque = valor_media_estoque / qntd_total_estoque
+        leitura.Close()
+
+        Dim quant_produto_vendido = CInt(txt_qtde.Text)
+        Dim zerou_vendas As Boolean
+        zerou_vendas = False
+
+        query = "select * from lancelot.lancamento_estoque WHERE NOME_PRODUTO= '" & cmb_comp_credito.SelectedItem.ToString & "' AND QTD > 0"
+        cmd = New MySqlCommand(query, my_sql_connection)
+        leitura = cmd.ExecuteReader
+
+        While leitura.Read
+            If zerou_vendas = True Then
+                Exit While
+            End If
+
+            Dim quant_restante_estoque = leitura("QTD")
+            Dim id_lancamento = leitura("IDESTOQUE")
+            Dim valor_uni = leitura("VALOR_UNI")
+
+
+            While quant_restante_estoque <> 0
+                If quant_produto_vendido = 0 Then
+                    zerou_vendas = True
+                    Exit While
+                End If
+
+                valor_custo_total += valor_media_estoque
+                quant_produto_vendido -= 1
+                quant_restante_estoque -= 1
+
+            End While
+
+            query = "update lancelot.lancamento_estoque set QTD=" & quant_restante_estoque & ",VALOR_TOTAL=" & (valor_uni * quant_restante_estoque) & " WHERE IDESTOQUE=" & id_lancamento & ""
+            cmd2 = New MySqlCommand(query, my_sql_connection2)
+            leitura2 = cmd2.ExecuteReader
+            leitura2.Close()
+
+        End While
+
+        leitura.Close()
+        query = "insert into lancelot.lancamento_credito_estoque(DATA_CRIAÇÃO,MODO_ESTOQUE, NOME_PRODUTO, QTD, VALOR_UNI, CUSTO_TOTAL_PROD, VALOR_TOTAL, LUCRO) VALUES ('" & CDate(DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss")) & "','" & UCase(modo_estoque) & "','" & cmb_comp_credito.SelectedItem.ToString & "' , " & CInt(txt_qtde.Text) & " , " & CDbl(txt_valor_unitario.Text) & ", " & valor_custo_total & " ," & CDbl(txt_valor_total.Text) & ", " & CDbl(txt_valor_total.Text) - valor_custo_total & ")"
+        cmd = New MySqlCommand(query, my_sql_connection)
+        leitura = cmd.ExecuteReader
+        my_sql_connection.Close()
+
+        MsgBox("Crédito de estoque cadastrado")
     End Sub
 End Class
