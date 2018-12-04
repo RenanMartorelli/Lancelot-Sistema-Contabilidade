@@ -9,7 +9,7 @@ Module mod_banco_de_dados
     Public tipologin As String
     Public nome_conta As String
     Public estoque As String
-    Public modo_estoque As String
+    Public total As Double
 
 
     Sub conexao_banco()
@@ -42,7 +42,7 @@ Module mod_banco_de_dados
             End While
             my_sql_connection.Close()
         Catch ex As Exception
-            MsgBox("Nao funcionou chamar_saldo_banco")
+            MsgBox("Nao funcionou T.T")
         Finally
             my_sql_connection.Dispose()
         End Try
@@ -65,7 +65,7 @@ Module mod_banco_de_dados
             End While
             my_sql_connection.Close()
         Catch ex As Exception
-            MsgBox("Nao funcionou chamar_saldo_estoque_total")
+            MsgBox("Nao funcionou T.T")
         Finally
             my_sql_connection.Dispose()
         End Try
@@ -88,7 +88,7 @@ Module mod_banco_de_dados
             End While
             my_sql_connection.Close()
         Catch ex As Exception
-            MsgBox("Nao funcionou chama_saldo_estoque")
+            MsgBox("Nao funcionou T.T")
         Finally
             my_sql_connection.Dispose()
         End Try
@@ -97,7 +97,6 @@ Module mod_banco_de_dados
 
     Public Function chama_qntd_estoque()
         Dim qntd As Integer
-        qntd = 0
         Try
             my_sql_connection.Open()
             query = "select * from lancelot.lancamento_estoque where NOME_PRODUTO = '" & estoque & "'"
@@ -108,31 +107,12 @@ Module mod_banco_de_dados
             End While
             my_sql_connection.Close()
         Catch ex As Exception
-            MsgBox("Nao funcionou chama_qntd_estoque")
+            MsgBox("Nao funcionou T.T")
         Finally
             my_sql_connection.Dispose()
         End Try
         Return qntd
     End Function
-
-
-    Public Sub pega_modo_estoque()
-        Try
-            my_sql_connection.Open()
-            query = "Select MODO_ESTOQUE FROM lancelot.cadastro_empresa"
-            cmd = New MySqlCommand(query, my_sql_connection)
-            leitura = cmd.ExecuteReader
-            While leitura.Read
-                modo_estoque = leitura("MODO_ESTOQUE")
-            End While
-            my_sql_connection.Close()
-        Catch ex As Exception
-            MsgBox("Falha ao identificar o modo de estoque definido")
-        Finally
-            my_sql_connection.Dispose()
-        End Try
-    End Sub
-
 End Module
 
 
