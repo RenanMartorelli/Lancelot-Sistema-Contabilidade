@@ -50,4 +50,8 @@ Public Class uct_dados_empresa
         End Try
 
     End Sub
+
+    Private Sub rdb_PEPS_CheckedChanged(sender As Object, e As EventArgs) Handles rdb_PEPS.CheckedChanged
+
+    End Sub
 End Class

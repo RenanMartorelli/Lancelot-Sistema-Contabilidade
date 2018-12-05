@@ -73,9 +73,20 @@ Public Class uct_novo_lançamento
                 'Call credito_estoque()
 
                 my_sql_connection.Open()
+                'If rdb_PEPS = true then
                 query = "select * from lancelot.lancamento_estoque WHERE NOME_PRODUTO= '" & cmb_comp_credito.SelectedItem.ToString & "' ORDER BY DATA_CRIAÇÃO ASC"
+                'Elseif rdb_UEPS = true then
+                'query = "select * from lancelot.lancamento_estoque WHERE NOME_PRODUTO= '" & cmb_comp_credito.SelectedItem.ToString & "' ORDER BY DATA_CRIAÇÃO DESC"
+                'Elseif rdb_MEDIA = true then
+                'query="select * from lancelot.lancamento_estoque WHERE NOME_PRODUTO= '" & cmb_comp_credito.SelectedItem.ToString & "'"
+                'End If
+
                 cmd = New MySqlCommand(query, my_sql_connection)
                 leitura = cmd.ExecuteReader
+
+                'INICIO MEDIA
+
+                'DEFINIÇÕES DE MÉDIA
 
                 Dim quant_produto_vendido = CInt(txt_qtde.Text)
                 Dim zerou_vendas As Boolean
@@ -114,7 +125,9 @@ Public Class uct_novo_lançamento
 
                     'my_sql_connection.Open()
                     leitura.Close()
+
                     query = "insert into lancelot.lancamento_credito_estoque(DATA_CRIAÇÃO, NOME_PRODUTO, QTD, VALOR_UNI, CUSTO_TOTAL_PROD, VALOR_TOTAL, LUCRO) VALUES ('" & CDate(txt_data.Text) & "','" & cmb_comp_credito.SelectedItem.ToString & "' , " & CInt(txt_qtde.Text) & " , " & CDbl(txt_valor_unitario.Text) & ", " & valor_custo_total & " ," & CDbl(txt_valor_total.Text) & ", " & CDbl(txt_valor_total.Text) - valor_custo_total & ")"
+
                     cmd = New MySqlCommand(query, my_sql_connection)
                     leitura = cmd.ExecuteReader
                     'leitura.Close()
@@ -122,16 +135,6 @@ Public Class uct_novo_lançamento
 
                 End While
                 my_sql_connection.Close()
-
-
-
-                'select tbestoque where produto ='" &cmb_comp_credito.selecteditem & "'"
-                'query = "insert into lancelot.lancamento_estoque(DATA_CRIAÇÃO, NOME_PRODUTO, QTD, VALOR_UNI, VALOR_TOTAL, TIPO) VALUES ('" & CDate(txt_data.Text) & "','" & cmb_comp_credito.SelectedItem.ToString & "' , '" & CInt(txt_qtde.Text) & "' , '" & CDbl(txt_valor_unitario.Text) & "', '" & CDbl(txt_valor_total.Text) & "' , '" & lbl_credito.Text & "')"
-                'cmd = New MySqlCommand(query, my_sql_connection)
-                'insert o comando na linha de comando do mysql
-                'leitura = cmd.ExecuteReader
-                'executa o comando lendo o banco
-                'my_sql_connection.Close()
 
                 MsgBox("Dados Cadastrados.")
 
